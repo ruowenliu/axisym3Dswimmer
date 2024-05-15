@@ -1,7 +1,8 @@
 # axisym3Dswimmer
 
 **This repository stores the programs for the preprint**
-Shape optimization of slip-driven axisymmetric microswimmers [arxiv](https://arxiv.org/abs/2405.00656/)
+
+_Shape optimization of slip-driven axisymmetric microswimmers_ [arxiv](https://arxiv.org/abs/2405.00656/)
 
 **It contains the following parts**
 1. Problem solver (kernals, ect.)
