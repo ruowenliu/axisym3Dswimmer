@@ -6,9 +6,12 @@ _Shape optimization of slip-driven axisymmetric microswimmers_ [arxiv](https://a
 
 **It contains the following parts**
 1. Problem solver (kernals, ect.)
-2. Parametrization of shapes
-3. Shape sensitivity verifications
-4. Optimization algorithms
+   See - folder: MatlabAxisymSwimmerSolver
+   Note: The function _brewermap_ (c) 2014 Stephen Cobeldick
+
+3. Parametrization of shapes
+4. Shape sensitivity verifications
+5. Optimization algorithms
 
 ## How to Run
 
