@@ -13,13 +13,3 @@ for nu = 0.6:0.05:1.0 % set reduced volume
 
     toc
 end
-
-
-% %%
-% nu = 0.6:0.05:1.0;
-% for imk = 1:9
-%     nu_im = nu(imk);
-%     h = figure(imk);
-%     saveas(h,['ProlateSpheroidData' num2str(nu_im*100,'%2i')],'epsc');
-% end
-% 
