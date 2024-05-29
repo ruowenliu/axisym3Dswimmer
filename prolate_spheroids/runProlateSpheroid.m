@@ -6,10 +6,8 @@ warningid = 'MATLAB:nearlySingularMatrix';
 warning('off',warningid)
 
 for nu = 0.6:0.05:1.0 % set reduced volume
-
     tic
     disp(nu)
     ProlateSpheroidAxisymSwimmer(nu)
-
     toc
 end
