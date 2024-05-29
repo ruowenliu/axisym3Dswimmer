@@ -1,21 +1,32 @@
 # axisym3Dswimmer
 
-**This repository stores the programs for the preprint**
+## This repository stores the programs for the preprint:
 
 _Shape optimization of slip-driven axisymmetric microswimmers_ [arxiv](https://arxiv.org/abs/2405.00656/)
 
-**It contains the following parts**
+## This repository contains the following parts
 1. Problem solver (kernals, ect.)
 
-The _solver_ folder contains the programs for solving the forward (and adjoint) problem. 
+   The _solver_ folder contains the programs for solving the forward (and adjoint) problem. 
 
-Some despcription of the programs are listed below.
+   Some despcription of the programs are listed below.
    
-Note: The function _brewermap_ (c) 2014 Stephen Cobeldick
+   _brewermap_ (c) 2014 Stephen Cobeldick is used to control colorbars.
 
-4. Parametrization of shapes
-5. Shape sensitivity verifications
-6. Optimization algorithms
+2. Calculation of maximum efficiency on prolate spheroids with various reduced volumes
 
-## How to Run
+   **To run the program, use runProlateSpheroid.m**
+
+3. Parametrization of shapes
+
+   **To run the program, use xxxx.m**
+
+4. Shape sensitivity verifications
+
+   **To run the program, use xxxx.m**
+
+5. Optimization algorithms
+
+   **To run the program, use xxxx.m**
+
 
