@@ -1,5 +1,5 @@
 function design_vec = get_initial_prolate(nu,noise)
-% (c) 2023 Ruowen Liu
+% (c) 05/30/2024 Ruowen Liu
 
 if nu==1
     axis.a = 1; axis.b = 1; % sphere
@@ -13,8 +13,10 @@ shape_prolate = shape3Dparam; % Use np and NL in "shape3Dparam"
 xi_R = xi_R_2L(1:shape_prolate.NL+5); xi_Z = xi_Z_2L(1:shape_prolate.NL+5);
 design_vec = [xi_R(2:end-1); xi_Z(2:end-1)]; % design vector for shape
 
+% Add white noise to the design_vector
+noise_level = 50; % the larger number the lower noise
 if strcmp(noise,'add noise')
-    design_vec = awgn(design_vec,50); % The last number controls the noise level, the larger number the lower noise
+    design_vec = awgn(design_vec,noise_level); 
 end
 
 end
