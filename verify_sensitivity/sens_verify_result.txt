@@ -1,0 +1,83 @@
+Date and Time: 30-Aug-2024 18:20:42 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+
+Finite Difference step size: 0.001 
+
+-----------------------------------------
+-- from symmetric-peanut to long-lump --
+-----------------------------------------
+Jdrag of initial shape: 1.0636649608 
+
+check derivative Jdrag'
+
+The derivative Jdrag' by central finite difference:   -0.1041001307 
+The derivative Jdrag' by derived sensitivity formula: -0.1041001802 
+
+Absolute error of Jdrag': 4.96e-08 
+Relative error of Jdrag': 4.76e-07 
+
+JE of initial shape: 0.5289290783 
+
+check derivative JE'
+
+The derivative JE' by central finite difference:   0.4697268864 
+The derivative JE' by derived sensitivity formula: 0.4697271865 
+
+Absolute error of JE': 3.00e-07 
+Relative error of JE': 6.39e-07 
+
+Elapsed time for one comparison: 45.2 seconds 
+
+-----------------------------------------
+-- from symmetric-peanut to asymmetric-vase --
+-----------------------------------------
+Jdrag of initial shape: 1.0636649608 
+
+check derivative Jdrag'
+
+The derivative Jdrag' by central finite difference:   -0.0252515809 
+The derivative Jdrag' by derived sensitivity formula: -0.0252515838 
+
+Absolute error of Jdrag': 2.89e-09 
+Relative error of Jdrag': 1.14e-07 
+
+JE of initial shape: 0.5289290783 
+
+check derivative JE'
+
+The derivative JE' by central finite difference:   -0.1247643229 
+The derivative JE' by derived sensitivity formula: -0.1247645918 
+
+Absolute error of JE': 2.69e-07 
+Relative error of JE': 2.16e-06 
+
+Elapsed time for one comparison: 34.4 seconds 
+
+-----------------------------------------
+-- from symmetric-peanut to three-bumps-2 --
+-----------------------------------------
+Jdrag of initial shape: 1.0636649608 
+
+check derivative Jdrag'
+
+The derivative Jdrag' by central finite difference:   -0.2434027721 
+The derivative Jdrag' by derived sensitivity formula: -0.2434030449 
+
+Absolute error of Jdrag': 2.73e-07 
+Relative error of Jdrag': 1.12e-06 
+
+JE of initial shape: 0.5289290783 
+
+check derivative JE'
+
+The derivative JE' by central finite difference:   1.0023055756 
+The derivative JE' by derived sensitivity formula: 1.0023044551 
+
+Absolute error of JE': 1.12e-06 
+Relative error of JE': 1.12e-06 
+
+Elapsed time for one comparison: 36.0 seconds 
+
