@@ -23,7 +23,7 @@ _Shape optimization of slip-driven axisymmetric microswimmers_ [arxiv](https://a
 
 4. Shape sensitivity verifications
 
-   **To run the program, use xxxx.m**
+   **To run the program, go to the folder "verify_sensitivity", then run "sens_verify_main.m". It reproduces the main results in Table 4.1, Section 5.1.**
 
 5. Optimization algorithms
 
