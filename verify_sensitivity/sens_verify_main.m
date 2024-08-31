@@ -57,6 +57,8 @@ for t1 = 1:length(shapelist)
         for k = 1:length(checklist)
             if strcmp(checklist{k}, 'Jdrag_rByV')
                 rename = 'Jdrag';
+            elseif strcmp(checklist{k}, 'JE')
+                rename = 'E';
             else
                 rename = checklist{k};
             end
