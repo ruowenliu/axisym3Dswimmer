@@ -1,4 +1,4 @@
-% This files verifies the shape sensitivities,
+% This file verifies the shape sensitivities,
 % compared with central finite difference
 % Written by Ruowen Liu, June 2023
 % Last modified and tested in August 2024
@@ -33,19 +33,19 @@ for t1 = 1:length(shapelist)
     if type_0~=type_1
         %%% original shape
         design_vec_0 = get_initial_parameterized_shape_gallery(type_0,nu);
-        shape_0 = shape3Dmaxefficiency(design_vec_0); % must find optimal uslip here
+        shape_0 = shape3Dmaxefficiency2(design_vec_0); % must find optimal uslip here
         shape_0.plotblack;
         %%% purturbed to new shape
         design_vec_1 = get_initial_parameterized_shape_gallery(type_1,nu);
-        shape_1 = shape3Dmaxefficiency(design_vec_1); % must find optimal uslip here
+        shape_1 = shape3Dmaxefficiency2(design_vec_1); % must find optimal uslip here
         shape_1.plotgreen;
         %%%
         delta_design_vec = design_vec_1 - design_vec_0;
         %%% upstream and downstream for central finite difference scheme
         design_vec_upstream = design_vec_0 - hs*delta_design_vec;
         design_vec_downstream = design_vec_0 + hs*delta_design_vec;
-        shape_upstream = shape3Dmaxefficiency(design_vec_upstream);
-        shape_downstream = shape3Dmaxefficiency(design_vec_downstream);
+        shape_upstream = shape3Dmaxefficiency2(design_vec_upstream);
+        shape_downstream = shape3Dmaxefficiency2(design_vec_downstream);
         %%%
         tht = shape_1.x - shape_0.x;
         shapeDer = shape_derivatives(shape_0, tht);

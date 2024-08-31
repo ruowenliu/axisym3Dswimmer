@@ -23,10 +23,10 @@ _Shape optimization of slip-driven axisymmetric microswimmers_ [arxiv](https://a
 
 4. Shape sensitivity verifications
 
-   **To run the program, go to the folder "verify_sensitivity", then run "sens_verify_main.m". It reproduces the main results in Table 4.1, Section 5.1.**
+   **To run the program, go to the folder "verify_sensitivity", then run "sens_verify_main.m". It reproduces the main results in Section 5.1.**
 
-5. Optimization algorithms
+5. Numerical results
 
-   **To run the program, use xxxx.m**
+   **In the folder "example_max_efficiency", run the main program "max_efficiency_main.m" directly can repeat the iterations in Section 5.2. The initial shape is set as a peanut-like swimmer, then the shape is optimized to obtain the maximum swimming efficiency.**
 
 

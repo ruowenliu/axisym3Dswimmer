@@ -1,4 +1,4 @@
-Date and Time: 31-Aug-2024 12:41:02 
+Date and Time: 31-Aug-2024 16:20:42 
 MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
 Computer Type: MACA64 
 Chip Type: Apple M1
@@ -19,17 +19,17 @@ The derivative Jdrag' by derived sensitivity formula: -0.1041001802
 Absolute error of Jdrag': 4.96e-08 
 Relative error of Jdrag': 4.76e-07 
 
-E of initial shape: 0.5289290783 
+E of initial shape: 0.5289580992 
 
 check derivative E'
 
-The derivative E' by central finite difference:   0.4697268864 
-The derivative E' by derived sensitivity formula: 0.4697271865 
+The derivative E' by central finite difference:   0.4692524336 
+The derivative E' by derived sensitivity formula: 0.4692526939 
 
-Absolute error of E': 3.00e-07 
-Relative error of E': 6.39e-07 
+Absolute error of E': 2.60e-07 
+Relative error of E': 5.55e-07 
 
-Elapsed time for one comparison: 40.0 seconds 
+Elapsed time for one comparison: 36.5 seconds 
 
 -----------------------------------------
 -- from symmetric-peanut to asymmetric-vase --
@@ -44,17 +44,17 @@ The derivative Jdrag' by derived sensitivity formula: -0.0252515838
 Absolute error of Jdrag': 2.89e-09 
 Relative error of Jdrag': 1.14e-07 
 
-E of initial shape: 0.5289290783 
+E of initial shape: 0.5289580992 
 
 check derivative E'
 
-The derivative E' by central finite difference:   -0.1247643229 
-The derivative E' by derived sensitivity formula: -0.1247645918 
+The derivative E' by central finite difference:   -0.1247043601 
+The derivative E' by derived sensitivity formula: -0.1247042903 
 
-Absolute error of E': 2.69e-07 
-Relative error of E': 2.16e-06 
+Absolute error of E': 6.98e-08 
+Relative error of E': 5.60e-07 
 
-Elapsed time for one comparison: 36.5 seconds 
+Elapsed time for one comparison: 35.1 seconds 
 
 -----------------------------------------
 -- from symmetric-peanut to three-bumps-2 --
@@ -69,15 +69,15 @@ The derivative Jdrag' by derived sensitivity formula: -0.2434030449
 Absolute error of Jdrag': 2.73e-07 
 Relative error of Jdrag': 1.12e-06 
 
-E of initial shape: 0.5289290783 
+E of initial shape: 0.5289580992 
 
 check derivative E'
 
-The derivative E' by central finite difference:   1.0023055756 
-The derivative E' by derived sensitivity formula: 1.0023044551 
+The derivative E' by central finite difference:   1.0017795677 
+The derivative E' by derived sensitivity formula: 1.0017788347 
 
-Absolute error of E': 1.12e-06 
-Relative error of E': 1.12e-06 
+Absolute error of E': 7.33e-07 
+Relative error of E': 7.32e-07 
 
-Elapsed time for one comparison: 36.9 seconds 
+Elapsed time for one comparison: 36.3 seconds 
 

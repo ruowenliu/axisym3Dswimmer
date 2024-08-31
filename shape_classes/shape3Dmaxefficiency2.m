@@ -1,6 +1,6 @@
-classdef shape3Dmaxefficiency < shape3Dadjoint
-    % (c) 2023 Ruowen Liu
+classdef shape3Dmaxefficiency2 < shape3Dadjoint
     % This is a subclass determining optimal slip and max efficiency
+    % use new slip optimization method
 
     properties
         uslip {mustBeNumeric}
@@ -15,35 +15,26 @@ classdef shape3Dmaxefficiency < shape3Dadjoint
 
     methods
 
-        function obj = shape3Dmaxefficiency(design_vec)
-            obj = obj@shape3Dadjoint(design_vec);
-            F = zeros(obj.Nu, 1);
-            trac = zeros(length(obj.t), obj.Nu);
-            for k = 1:obj.Nu
-                us_k = obj.W_matrix(:,k).*obj.tang;
-                rhs_full_k = [real(us_k);imag(us_k)];
-                mu_k = obj.A\rhs_full_k;  % solve for density
-                f_k = (eye(size(obj.T))/2 + obj.T)*mu_k;   % traction
-                trac(:,k) = f_k(1:end/2) + 1i*f_k(end/2+1:end);
-                F(k) = 2*pi*obj.ws'*(imag(trac(:,k)).*real(obj.x));
-            end
-
-            Amatrix = zeros(obj.Nu);
-            Qmatrix = zeros(obj.Nu);
-            for p = 1:obj.Nu
-                for q = 1:obj.Nu
-                    Amatrix(p,q) = 2*pi*obj.ws'*(dotv(trac(:,p),(obj.W_matrix(:,q).*obj.tang)).*real(obj.x));
-                    Qmatrix(p,q) = Amatrix(p,q) - F(p)*F(q)/obj.F0;
-                end
-            end
-
-            obj.optimal_xi_slip = - Qmatrix\F; % negative sign to make U>0
-            obj.uslip =  obj.W_matrix * obj.optimal_xi_slip;
-            obj.JE = - F'*obj.optimal_xi_slip/obj.F0;
-
+        function obj = shape3Dmaxefficiency2(design_vec)
+            obj = obj@shape3Dadjoint(design_vec); % adjoint solution
+            Mat = [ (real(obj.tang).*obj.C(1:end/2,:) + imag(obj.tang).*obj.C(end/2+1:end,:)) ; ...
+                (real(obj.nx).*obj.A(1:end/2,:) + imag(obj.nx).*obj.A(end/2+1:end,:)) ];
+            rhs = [dotv(obj.trachat, obj.tang) ; zeros(size(obj.nx))];
+            mu0 = Mat\rhs;
+            trac_til = obj.C(1:end/2,:)*mu0 + 1i*obj.C(end/2+1:end,:)*mu0;
+            u_til = obj.A(1:end/2,:)*mu0 + 1i*obj.A(end/2+1:end,:)*mu0;
+            zs = dotv(u_til, obj.tang);
+            Mat_full = [obj.A [zeros(length(obj.t),1);-ones(length(obj.t),1)];...
+                (real(obj.x).*obj.ws(:))'*obj.C(end/2+1:end,:) 0];
+            rhs_full = [real(u_til);imag(u_til);0];
+            sol_full = Mat_full\rhs_full;
+            mu0 = sol_full(1:end-1);
+            U = sol_full(end);  % solve for U
+            obj.JE = -U/(1+U);
+            %normalize U
+            obj.uslip = zs/U;
             [obj.trac, obj.pres, obj.U, obj.JW, obj.JD] = forwardproblem(obj);
-
-        end % function shape3Dmaxefficiency
+        end % shapeDerivative
 
         function plotuslip(obj)
             figure
@@ -67,7 +58,7 @@ classdef shape3Dmaxefficiency < shape3Dadjoint
             ylim([0,1.5]);
             grid on;
             drawnow;
-        end % plotuslipU1
+        end % plotuslip
 
         function printresults(obj)
             fprintf('-- Results:ReducedVolume %.6f,MaxEfficiency %.6f,DragForce %.6f --\n',obj.rvol,obj.JE,obj.Jdrag_rByV);
@@ -77,12 +68,12 @@ classdef shape3Dmaxefficiency < shape3Dadjoint
             figure, hold on, colorchoice = '#000000'; % black
             xzfullround = [obj.endpt0; obj.x; obj.endpt1; flipud(-real(obj.x)+1i*imag(obj.x)); obj.endpt0; obj.x(1:10)];
             plot(real(xzfullround),imag(xzfullround),'-','color',colorchoice,'linewidth',1.5);
-            titlename = sprintf('$\\nu$ = %.5f, Max Efficency = %.5f, Drag Force = %.5f',obj.rvol,obj.JE,obj.Jdrag_rByV);
+            titlename = sprintf('$\\nu$ = %.3f, $E$ = %.3f, $J_{drag}$ = %.3f',obj.rvol,obj.JE,obj.Jdrag_rByV);
             tlt = title(titlename,'FontSize',15);
             set(tlt,'Interpreter','latex');
             set(gca,'FontSize',15,'TickLabelInterpreter','latex');
             grid off; axis equal; ylim([-2.5,2.5]); drawnow;
-        end % plotblack
+        end
 
         function plotorange(obj)
             figure, hold on, colorchoice = '#F28522'; % orange
@@ -93,7 +84,7 @@ classdef shape3Dmaxefficiency < shape3Dadjoint
             set(tlt,'Interpreter','latex');
             set(gca,'FontSize',15,'TickLabelInterpreter','latex');
             grid off; axis equal; ylim([-2.5,2.5]); drawnow;
-        end % plotorange
+        end
 
         function plotgreen(obj)
             figure, hold on, colorchoice = '#77AC30'; % green
@@ -104,7 +95,7 @@ classdef shape3Dmaxefficiency < shape3Dadjoint
             set(tlt,'Interpreter','latex');
             set(gca,'FontSize',15,'TickLabelInterpreter','latex');
             grid off; axis equal; ylim([-2.5,2.5]); drawnow;
-        end % plotgreen
+        end
 
         function plotblue(obj)
             figure, hold on, colorchoice = '#0000a7'; % blue
@@ -115,9 +106,9 @@ classdef shape3Dmaxefficiency < shape3Dadjoint
             set(tlt,'Interpreter','latex');
             set(gca,'FontSize',15,'TickLabelInterpreter','latex');
             grid off; axis equal; ylim([-2.5,2.5]); drawnow;
-        end % plotblue
+        end
 
-    end % methods
+    end
 
 end
 
@@ -138,5 +129,6 @@ trac = traction(1:end/2) + 1i*traction(end/2+1:end);
 pres = s.P*mu0-1/2*(real(s.nx).*mu0(1:end/2)+imag(s.nx).*mu0(end/2+1:end));
 JW = 2*pi*(real(s.x).*s.ws(:))'*dotv(trac, s.uslip.*s.tang+1i*U);
 JD = s.F0*U*U;
+% JE = JD/JW;
 
-end % function forwardproblem
+end % function
