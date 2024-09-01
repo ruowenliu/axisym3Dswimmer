@@ -1,6 +1,7 @@
 classdef shape3Dmaxefficiency2 < shape3Dadjoint
     % This is a subclass determining optimal slip and max efficiency
     % use new slip optimization method
+    % (c) 2023 Ruowen Liu
 
     properties
         uslip {mustBeNumeric}

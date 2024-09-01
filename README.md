@@ -15,7 +15,7 @@ _Shape optimization of slip-driven axisymmetric microswimmers_ [arxiv](https://a
 
 2. Calculation of maximum efficiency on prolate spheroids with various reduced volumes
 
-   **To run the program, use runProlateSpheroid.m**
+   **To run the program, use "runProlateSpheroid.m"**
 
 3. Parametrization of shapes
 
