@@ -1,4 +1,4 @@
-Date and Time: 01-Sep-2024 16:15:51 
+Date and Time: 01-Sep-2024 17:22:27 
 MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
 Computer Type: MACA64 
 Chip Type: Apple M1
@@ -104,7 +104,7 @@ the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWind
 <<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.264555e-07','1.000000e-04'},true,true);;">stopping criteria details</a>>
 -----> Optimization is complete. 
 
-Total Elapsed Time: 0 hours, 13 minutes, 35 seconds. 
+Total Elapsed Time: 0 hours, 12 minutes, 8 seconds. 
 
 Final Shape:
 -- Results:ReducedVolume 0.600115,MaxEfficiency 4.830799,DragForce 1.060323 --

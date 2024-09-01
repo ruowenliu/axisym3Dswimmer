@@ -1,0 +1,276 @@
+Date and Time: 01-Sep-2024 18:07:50 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+-------START-------
+-------------------
+--> Print Design Parameters: 
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99 
+
+--> c.lam: 0.00000 and c.sig: 8.00000 
+
+--> c.target (reduced volume): 0.75 
+
+--> c.tolerance: 0.812252 
+
+--> c.multi_cst: 2 
+
+--> constraint_tolerance: 0.00025 
+
+--> increaseSIGfactor: 1.5 
+
+**** ALM Loop = 0 
+current parameters: lambda = 0 and sigma = 8
+current c.tolerance: 0.812252 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.981272                        0.0327
+     1           3         0.980182       0.322109         0.0104  
+-- Results: Reduced_Vol = 0.763028  Drag_rByV = 0.977466 --
+     2           5         0.978575        8.82541        0.00938  
+-- Results: Reduced_Vol = 0.759821  Drag_rByV = 0.977032 --
+     3           6         0.978162              1        0.00589  
+-- Results: Reduced_Vol = 0.760534  Drag_rByV = 0.976387 --
+     4           7         0.977803              1        0.00397  
+-- Results: Reduced_Vol = 0.760540  Drag_rByV = 0.976026 --
+     5           8          0.97765              1        0.00808  
+-- Results: Reduced_Vol = 0.761699  Drag_rByV = 0.975460 --
+     6           9         0.977542              1        0.00291  
+-- Results: Reduced_Vol = 0.760582  Drag_rByV = 0.975750 --
+     7          10           0.9775              1        0.00255  
+-- Results: Reduced_Vol = 0.759898  Drag_rByV = 0.975933 --
+     8          11         0.977465              1        0.00199  
+-- Results: Reduced_Vol = 0.759558  Drag_rByV = 0.976003 --
+Objective function returned Inf; trying a new point...
+     9          13         0.977437            0.5        0.00185  
+-- Results: Reduced_Vol = 0.759573  Drag_rByV = 0.975971 --
+Objective function returned Inf; trying a new point...
+    10          18         0.977422       0.171875        0.00173  
+-- Results: Reduced_Vol = 0.759600  Drag_rByV = 0.975947 --
+Objective function returned Inf; trying a new point...
+    11          73         0.977418        0.04823        0.00165  
+-- Results: Reduced_Vol = 0.759618  Drag_rByV = 0.975937 --
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because it cannot decrease the objective function
+along the current <a href = "matlab: helpview('optim','search_direction','CSHelpWindow');">search direction</a>.
+
+<<a href = "matlab: createExitMsg({'optim:fminusub:Exit5basic','fminunc'},{'optim:fminusub:Exit5detailed'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 1 
+current parameters: lambda = -0.1539 and sigma = 8
+current c.tolerance: 0.125 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.980378                         0.043
+     1           3         0.979108       0.207509         0.0013  
+-- Results: Reduced_Vol = 0.751102  Drag_rByV = 0.978749 --
+     2           5          0.97909             10        0.00162  
+-- Results: Reduced_Vol = 0.750673  Drag_rByV = 0.978875 --
+     3           6          0.97908              1        0.00141  
+-- Results: Reduced_Vol = 0.750848  Drag_rByV = 0.978807 --
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','6.674598e-05','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 2 
+current parameters: lambda = -0.1675 and sigma = 8
+current c.tolerance: 0.0192366 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979103                       0.00357
+     1           3         0.979095       0.219733        0.00107  
+-- Results: Reduced_Vol = 0.750201  Drag_rByV = 0.979028 --
+Objective function returned Inf; trying a new point...
+     2           8         0.979092         3.8125       0.000955  
+-- Results: Reduced_Vol = 0.750208  Drag_rByV = 0.979022 --
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','4.610037e-07','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 3 
+current parameters: lambda = -0.1708 and sigma = 8
+current c.tolerance: 0.00296038 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979093                         0.001
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.220708e-05','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 4 
+current parameters: lambda = -0.1741 and sigma = 8
+current c.tolerance: 0.000455583 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979095                       0.00198
+Objective function returned Inf; trying a new point...
+     1           4         0.979092        0.23625       0.000946  
+-- Results: Reduced_Vol = 0.749808  Drag_rByV = 0.979158 --
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','9.764151e-05','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 5 
+current parameters: lambda = -0.171 and sigma = 8
+current c.tolerance: 7.0111e-05 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979093                        0.0013
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','3.962559e-05','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 6 
+current parameters: lambda = 0 and sigma = 12
+current c.tolerance: 0.779977 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979159                        0.0515
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.226631e-06','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 7 
+current parameters: lambda = 0.004612 and sigma = 12
+current c.tolerance: 0.0833333 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979161                        0.0529
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.284988e-06','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 8 
+current parameters: lambda = 0.009223 and sigma = 12
+current c.tolerance: 0.00890339 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979163                        0.0542
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.343345e-06','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 9 
+current parameters: lambda = 0.01383 and sigma = 12
+current c.tolerance: 0.000951245 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979164                        0.0556
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.401702e-06','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 10 
+current parameters: lambda = 0.01845 and sigma = 12
+current c.tolerance: 0.000101632 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979166                        0.0569
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.460060e-06','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 11 
+current parameters: lambda = 0 and sigma = 18
+current c.tolerance: 0.748984 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1          0.97916                        0.0522
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.255809e-06','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 12 
+current parameters: lambda = 0.006917 and sigma = 18
+current c.tolerance: 0.0555556 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979162                        0.0542
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.343345e-06','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 13 
+current parameters: lambda = 0.01383 and sigma = 18
+current c.tolerance: 0.00412081 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.979165                        0.0563
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.430881e-06','1.000000e-04'},true,true);;">stopping criteria details</a>>
+-----> Optimization Halted 
+
+Total Elapsed Time: 0 hours, 18 minutes, 52 seconds. 
+
+Final Shape:
+-- Results:ReducedVolume 0.749808,MaxEfficiency 2.442795,DragForce 0.979158 --

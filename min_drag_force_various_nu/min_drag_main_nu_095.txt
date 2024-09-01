@@ -1,0 +1,150 @@
+Date and Time: 01-Sep-2024 19:01:05 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+-------START-------
+-------------------
+--> Print Design Parameters: 
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99 
+
+--> c.lam: 0.00000 and c.sig: 8.00000 
+
+--> c.target (reduced volume): 0.95 
+
+--> c.tolerance: 0.812252 
+
+--> c.multi_cst: 2 
+
+--> constraint_tolerance: 0.00025 
+
+--> increaseSIGfactor: 1.5 
+
+**** ALM Loop = 0 
+current parameters: lambda = 0 and sigma = 8
+current c.tolerance: 0.812252 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.961573                        0.0244
+     1           2         0.960525              1         0.0261  
+-- Results: Reduced_Vol = 0.938830  Drag_rByV = 0.958529 --
+     2           3          0.95937              1        0.00674  
+-- Results: Reduced_Vol = 0.946233  Drag_rByV = 0.959143 --
+     3           4         0.959222              1        0.00555  
+-- Results: Reduced_Vol = 0.945617  Drag_rByV = 0.958914 --
+     4           5         0.959029              1        0.00504  
+-- Results: Reduced_Vol = 0.943613  Drag_rByV = 0.958377 --
+     5           6         0.958983              1        0.00347  
+-- Results: Reduced_Vol = 0.944214  Drag_rByV = 0.958448 --
+     6           7         0.958954              1        0.00142  
+-- Results: Reduced_Vol = 0.944459  Drag_rByV = 0.958463 --
+     7           8         0.958939              1       0.000959  
+-- Results: Reduced_Vol = 0.944385  Drag_rByV = 0.958435 --
+     8           9         0.958931              1       0.000962  
+-- Results: Reduced_Vol = 0.944338  Drag_rByV = 0.958418 --
+     9          10         0.958925              1        0.00126  
+-- Results: Reduced_Vol = 0.944266  Drag_rByV = 0.958399 --
+    10          11         0.958921              1       0.000384  
+-- Results: Reduced_Vol = 0.944230  Drag_rByV = 0.958388 --
+    11          12         0.958919              1       0.000393  
+-- Results: Reduced_Vol = 0.944216  Drag_rByV = 0.958384 --
+    12          13         0.958917              1       0.000509  
+-- Results: Reduced_Vol = 0.944199  Drag_rByV = 0.958378 --
+    13          14         0.958914              1       0.000487  
+-- Results: Reduced_Vol = 0.944260  Drag_rByV = 0.958387 --
+    14          16         0.958914       0.284265        0.00039  
+-- Results: Reduced_Vol = 0.944160  Drag_rByV = 0.958368 --
+    15          17         0.958913              1       5.24e-05  
+-- Results: Reduced_Vol = 0.944216  Drag_rByV = 0.958378 --
+
+<a href = "matlab: helpview('optim','local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview('optim','grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the value of the <a href = "matlab: helpview('optim','optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optim:fminusub:Exit1basic'},{'optim:fminusub:Exit1detailed','5.119417e-05','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 1 
+current parameters: lambda = 0.09255 and sigma = 8
+current c.tolerance: 0.125 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.959984                        0.0141
+     1           2         0.959822              1         0.0126  
+-- Results: Reduced_Vol = 0.952278  Drag_rByV = 0.960161 --
+     2           3          0.95955              1        0.00109  
+-- Results: Reduced_Vol = 0.949063  Drag_rByV = 0.959363 --
+     3           4         0.959543              1        0.00106  
+-- Results: Reduced_Vol = 0.948837  Drag_rByV = 0.959306 --
+     4           5         0.959536              1       0.000972  
+-- Results: Reduced_Vol = 0.948822  Drag_rByV = 0.959296 --
+     5           6         0.959534              1        0.00149  
+-- Results: Reduced_Vol = 0.948994  Drag_rByV = 0.959332 --
+     6           7         0.959532              1       0.000312  
+-- Results: Reduced_Vol = 0.949083  Drag_rByV = 0.959349 --
+     7           8         0.959531              1       0.000255  
+-- Results: Reduced_Vol = 0.949120  Drag_rByV = 0.959356 --
+     8           9         0.959531              1        0.00027  
+-- Results: Reduced_Vol = 0.949134  Drag_rByV = 0.959358 --
+     9          10          0.95953              1       0.000263  
+-- Results: Reduced_Vol = 0.949124  Drag_rByV = 0.959356 --
+    10          11          0.95953              1       0.000433  
+-- Results: Reduced_Vol = 0.949105  Drag_rByV = 0.959351 --
+    11          12         0.959529              1        0.00012  
+-- Results: Reduced_Vol = 0.949094  Drag_rByV = 0.959349 --
+    12          13         0.959529              1       9.32e-05  
+-- Results: Reduced_Vol = 0.949094  Drag_rByV = 0.959349 --
+
+<a href = "matlab: helpview('optim','local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview('optim','grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the value of the <a href = "matlab: helpview('optim','optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optim:fminusub:Exit1basic'},{'optim:fminusub:Exit1detailed','9.195596e-05','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 2 
+current parameters: lambda = 0.107 and sigma = 8
+current c.tolerance: 0.0192366 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.959556                       0.00212
+     1           2         0.959551              1        0.00183  
+-- Results: Reduced_Vol = 0.950327  Drag_rByV = 0.959619 --
+     2           3         0.959545              1       0.000177  
+-- Results: Reduced_Vol = 0.949826  Drag_rByV = 0.959507 --
+     3           4         0.959544              1       0.000171  
+-- Results: Reduced_Vol = 0.949821  Drag_rByV = 0.959506 --
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','7.960088e-05','1.000000e-04'},true,true);;">stopping criteria details</a>>
+**** ALM Loop = 3 
+current parameters: lambda = 0.1099 and sigma = 8
+current c.tolerance: 0.00296038 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         0.959546                       0.00043
+     1           2         0.959545              1       0.000361  
+-- Results: Reduced_Vol = 0.950073  Drag_rByV = 0.959561 --
+     2           3         0.959545              1       0.000165  
+-- Results: Reduced_Vol = 0.950000  Drag_rByV = 0.959545 --
+     3           4         0.959545              1       0.000154  
+-- Results: Reduced_Vol = 0.949980  Drag_rByV = 0.959540 --
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','9.708549e-05','1.000000e-04'},true,true);;">stopping criteria details</a>>
+-----> Optimization is complete. 
+
+Total Elapsed Time: 0 hours, 9 minutes, 27 seconds. 
+
+Final Shape:
+-- Results:ReducedVolume 0.949980,MaxEfficiency 0.871795,DragForce 0.959540 --

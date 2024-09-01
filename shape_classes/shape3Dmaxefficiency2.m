@@ -1,6 +1,6 @@
 classdef shape3Dmaxefficiency2 < shape3Dadjoint
     % This is a subclass determining optimal slip and max efficiency
-    % use new slip optimization method
+    % use the new slip optimization method (faster and more accurate)
     % (c) 2023 Ruowen Liu
 
     properties
@@ -32,8 +32,7 @@ classdef shape3Dmaxefficiency2 < shape3Dadjoint
             mu0 = sol_full(1:end-1);
             U = sol_full(end);  % solve for U
             obj.JE = -U/(1+U);
-            %normalize U
-            obj.uslip = zs/U;
+            obj.uslip = zs/U; % normalize U
             [obj.trac, obj.pres, obj.U, obj.JW, obj.JD] = forwardproblem(obj);
         end % shapeDerivative
 
@@ -130,6 +129,6 @@ trac = traction(1:end/2) + 1i*traction(end/2+1:end);
 pres = s.P*mu0-1/2*(real(s.nx).*mu0(1:end/2)+imag(s.nx).*mu0(end/2+1:end));
 JW = 2*pi*(real(s.x).*s.ws(:))'*dotv(trac, s.uslip.*s.tang+1i*U);
 JD = s.F0*U*U;
-% JE = JD/JW;
+% Already Verified: JE = JD/JW
 
 end % function
