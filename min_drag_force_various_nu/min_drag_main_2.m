@@ -11,7 +11,7 @@ warning('off',warningid)
 addpath('../shape_classes')
 addpath('../quadrature_and_kernal')
 
-for nu = [0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+for nu = [0.85, 0.90, 0.95]
 
     %%% the initial prolate spheroid
     rng('default');
