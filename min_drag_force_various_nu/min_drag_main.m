@@ -11,7 +11,11 @@ warning('off',warningid)
 addpath('../shape_classes')
 addpath('../quadrature_and_kernal')
 
-for nu = [0.85, 0.90, 0.95]
+input_data = readtable('input_parameters.csv');
+
+for row = 3 % size(input_data,1)
+
+    nu = input_data{row, 1};
 
     %%% the initial prolate spheroid
     rng('default');
@@ -39,21 +43,29 @@ for nu = [0.85, 0.90, 0.95]
     fprintf('--> Print Design Parameters: \n')
     fprintf('p:%i,np:%i,NL:%i,NLuslip:%i,L:%g,Luslip:%g,Nu:%i \n\n',shape_initial.p,shape_initial.np,shape_initial.NL,shape_initial.NLuslip,shape_initial.L,shape_initial.Luslip,shape_initial.Nu);
 
-    c.lam = 0; c.sig = 8; fprintf('--> c.lam: %.5f and c.sig: %.5f \n\n', c.lam, c.sig);
+    c.lam = input_data{row, 2}; c.sig = input_data{row, 3}; 
+    fprintf('--> c.lam: %.5f and c.sig: %.5f \n\n', c.lam, c.sig);
 
-    c.target = nu; fprintf('--> c.target (reduced volume): %.2f \n\n', c.target);
+    c.target = nu; 
+    fprintf('--> c.target (reduced volume): %.2f \n\n', c.target);
 
-    c.tolerance = c.sig^(-0.1); fprintf('--> c.tolerance: %g \n\n',c.tolerance);
+    c.tolerance = c.sig^(-0.1); 
+    fprintf('--> c.tolerance: %g \n\n',c.tolerance);
 
-    c.multi_cst = 2; fprintf('--> c.multi_cst: %g \n\n',c.multi_cst);
+    c.multi_cst = input_data{row, 4}; 
+    fprintf('--> c.multi_cst: %g \n\n',c.multi_cst);
 
-    constraint_tolerance = 1e-3*2^(-2); fprintf('--> constraint_tolerance: %g \n\n',constraint_tolerance);
+    constraint_tolerance = 1e-4 * c.multi_cst;
+    fprintf('--> constraint_tolerance: %g \n\n',constraint_tolerance);
 
-    increaseSIGfactor = 1.5; fprintf('--> increaseSIGfactor: %g \n\n',increaseSIGfactor);
+    increaseSIGfactor = input_data{row, 5}; 
+    fprintf('--> increaseSIGfactor: %g \n\n',increaseSIGfactor);
 
-    step_tolerance = 1e-4; fprintf('--> StepTolerance: %g \n\n',step_tolerance);
+    step_tolerance = input_data{row, 6}; 
+    fprintf('--> StepTolerance: %g \n\n',step_tolerance);
 
-    optimality_tolerance = 1e-4; fprintf('--> OptimalityTolerance: %g \n\n',optimality_tolerance);
+    optimality_tolerance = input_data{row, 7}; 
+    fprintf('--> OptimalityTolerance: %g \n\n',optimality_tolerance);
     
     options = optimoptions(@fminunc, ...
         'Display','iter', ...
@@ -94,7 +106,6 @@ for nu = [0.85, 0.90, 0.95]
             end
         else
             c.sig = increaseSIGfactor*c.sig;
-            c.lam = 0;
             c.tolerance = c.sig^(-0.1);
         end
 
@@ -102,7 +113,7 @@ for nu = [0.85, 0.90, 0.95]
             outputiternum = outputiternum + 1;
         end
 
-        if outputiternum >= 10
+        if outputiternum >= 3
             stop_code = 1;
             fprintf('-----> Optimization Halted \n\n')
 

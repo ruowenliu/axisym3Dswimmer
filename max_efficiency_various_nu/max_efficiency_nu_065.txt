@@ -1,0 +1,199 @@
+Date and Time: 02-Sep-2024 16:10:02 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+-------START-------
+-------------------
+Calculate Initial Shape.
+
+<a href = "matlab: helpview('optim','eqn_solved','CSHelpWindow');">Equation solved</a>.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the <a href = "matlab: helpview('optim','fcn_tolerance_fsolve','CSHelpWindow');">function tolerance</a>, and
+the <a href = "matlab: helpview('optim','appears_regular','CSHelpWindow');">problem appears regular</a> as measured by the gradient.
+
+<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','4.711058e-08','1.000000e-06','7.912741e-17','1.000000e-03'},true,true);;">stopping criteria details</a>>
+
+-- Print Design Parameters: --
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
+
+-- Print Initial Results: --
+-- Results:ReducedVolume 0.655377,MaxEfficiency 3.029093,DragForce 1.025695 --
+-- c.lam: 0.0000 and c.sig: 200 -- 
+-- c.target (reduced volume): 0.65 -- 
+-- c.tolerance: 0.0588704 -- 
+-- c.multi_cst: 1 -- 
+-- constraint_tolerance_nomult: 1e-05 -- 
+-- constraint_tolerance: 1e-05 -- 
+-- increaseSIGfactor: 10 -- 
+
+ ------ ALM Loop = 0 ------ 
+**** set options.MaxIterations: 4
+* In this ALM, lambda = 0 and sigma = 200
+** c.tolerance: 0.0588704 
+*** fixate poles basis number: 4 
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1          -3.0262                          1.23
+Objective function returned Inf; trying a new point...
+     1           4         -3.32564      0.0253738           1.45  
+-- Results:ReducedVolume 0.642770,MaxEfficiency 3.330868,DragForce 1.031976 --
+     2           6         -3.56968       0.574538           1.45  
+-- Results:ReducedVolume 0.615037,MaxEfficiency 3.691927,DragForce 1.051415 --
+     3           8         -3.62027       0.364084            1.1  
+-- Results:ReducedVolume 0.604069,MaxEfficiency 3.831236,DragForce 1.059889 --
+     4           9         -3.64515              1          0.531  
+-- Results:ReducedVolume 0.599044,MaxEfficiency 3.904806,DragForce 1.063676 --
+
+<a href = "matlab: helpview('optim','solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+fminunc stopped because it exceeded the iteration limit,
+<a href = "matlab: helpview('optim','max_iter','CSHelpWindow');">options.MaxIterations</a> = 4.000000e+00.
+
+ ------ ALM Loop = 0 finished ------ 
+
+ ------ ALM Loop = 1 ------ 
+**** set options.MaxIterations: 4
+* In this ALM, lambda = 10.19 and sigma = 200
+** c.tolerance: 5e-05 
+*** fixate poles basis number: 4 
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         -3.12584                          1.35
+Objective function returned Inf; trying a new point...
+     1           4         -3.24261      0.0231939           2.17  
+-- Results:ReducedVolume 0.631356,MaxEfficiency 3.467366,DragForce 1.040234 --
+     2           5         -3.32193              1           1.02  
+-- Results:ReducedVolume 0.640246,MaxEfficiency 3.430847,DragForce 1.034477 --
+     3           6         -3.34372              1          0.584  
+-- Results:ReducedVolume 0.641068,MaxEfficiency 3.442728,DragForce 1.033798 --
+     4           7         -3.35784              1          0.365  
+-- Results:ReducedVolume 0.643012,MaxEfficiency 3.433942,DragForce 1.032261 --
+
+<a href = "matlab: helpview('optim','solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+fminunc stopped because it exceeded the iteration limit,
+<a href = "matlab: helpview('optim','max_iter','CSHelpWindow');">options.MaxIterations</a> = 4.000000e+00.
+
+ ------ ALM Loop = 1 finished ------ 
+
+ ------ ALM Loop = 2 ------ 
+**** set options.MaxIterations: 5
+* In this ALM, lambda = 10.19 and sigma = 2000
+** c.tolerance: 0.0467624 
+*** fixate poles basis number: 0 
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         -3.31389                          5.63
+Objective function returned Inf; trying a new point...
+     1           4         -3.60679     0.00555181           3.23  
+-- Results:ReducedVolume 0.657833,MaxEfficiency 3.588313,DragForce 1.021994 --
+     2           5         -3.76162              1           1.99  
+-- Results:ReducedVolume 0.654186,MaxEfficiency 3.736486,DragForce 1.023773 --
+Objective function returned Inf; trying a new point...
+     3           7         -3.96894            0.5           1.32  
+-- Results:ReducedVolume 0.650349,MaxEfficiency 3.965513,DragForce 1.025852 --
+Objective function returned Inf; trying a new point...
+     4          12         -4.04481       0.171875           1.35  
+-- Results:ReducedVolume 0.649097,MaxEfficiency 4.054838,DragForce 1.026673 --
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','3.144970e-06','1.000000e-03'},true,true);;">stopping criteria details</a>>
+ ------ ALM Loop = 2 finished ------ 
+
+ ------ ALM Loop = 3 ------ 
+**** set options.MaxIterations: 5
+* In this ALM, lambda = 12 and sigma = 2000
+** c.tolerance: 5e-06 
+*** fixate poles basis number: 0 
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         -4.04318                          1.38
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','5.342609e-05','1.000000e-03'},true,true);;">stopping criteria details</a>>
+ ------ ALM Loop = 3 finished ------ 
+
+ ------ ALM Loop = 4 ------ 
+**** set options.MaxIterations: 5
+* In this ALM, lambda = 12 and sigma = 20000
+** c.tolerance: 0.0371447 
+*** fixate poles basis number: 0 
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         -4.03584                          2.87
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','4.540499e-05','1.000000e-03'},true,true);;">stopping criteria details</a>>
+ ------ ALM Loop = 4 finished ------ 
+----->  Optimization is terminated early. ----- 
+Total Elapsed Time: 0 hours, 29 minutes, 37 seconds. 
+Final Shape:
+-- Results:ReducedVolume 0.649097,MaxEfficiency 4.054838,DragForce 1.026673 --
+
+
+ Final Design Vector: 
+  -0.054408729684932
+   0.004082269283156
+   0.015185800751090
+   0.047892406892010
+   0.111696042124174
+   0.137476856372239
+   0.190130693975030
+   0.236257804081850
+   0.280180844287438
+   0.316721531113827
+   0.342104009044085
+   0.355865434967465
+   0.355865434928151
+   0.342104008884236
+   0.316721530924060
+   0.280180844091602
+   0.236257803963858
+   0.190130693937457
+   0.137476856144699
+   0.111696042212888
+   0.047892406654409
+   0.015185799799788
+   0.004082268001295
+  -0.054408729735944
+   1.694281672920953
+   1.745173680017089
+   1.695277899754543
+   1.603252444384058
+   1.468511970075210
+   1.377858796929112
+   1.230138027437422
+   1.051999502675580
+   0.845371211555717
+   0.620743459206654
+   0.378192110474110
+   0.127645382541531
+  -0.127645382539832
+  -0.378192110441469
+  -0.620743459134689
+  -0.845371211537894
+  -1.051999502701716
+  -1.230138027476865
+  -1.377858797305694
+  -1.468511968666707
+  -1.603252444202127
+  -1.695277898380733
+  -1.745173679481011
+  -1.694281673077226

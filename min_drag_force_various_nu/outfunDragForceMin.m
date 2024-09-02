@@ -9,7 +9,7 @@ switch state
             shape_current.printresults;
         end
     case 'interrupt'
-        % Probably no action here. Check conditions to see whether optimization should quit.
+        % Check conditions to see whether optimization should quit
     case 'init'
         % Setup for plots or guis
     case 'done'

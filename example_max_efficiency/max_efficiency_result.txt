@@ -1,4 +1,4 @@
-Date and Time: 31-Aug-2024 14:57:38 
+Date and Time: 02-Sep-2024 16:50:52 
 MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
 Computer Type: MACA64 
 Chip Type: Apple M1
@@ -12,15 +12,23 @@ p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
 
 -- Print Initial Results: --
 -- Results:ReducedVolume 0.700641,MaxEfficiency 0.528958,DragForce 1.063665 --
--- c.lam: 0.0000 and c.sig: 200 -- 
--- c.target (reduced volume): 0.7 -- 
--- c.tolerance: 0.0588704 -- 
--- c.multi_cst: 1 -- 
--- constraint_tolerance_nomult: 1e-05 -- 
--- constraint_tolerance: 1e-05 -- 
--- increaseSIGfactor: 10 -- 
+--> c.lam: 0.0000 and c.sig: 200 
 
- ------ ALM Loop = 0 ------ 
+--> c.target (reduced volume): 0.7 
+
+--> c.tolerance: 0.0588704 
+
+--> c.multi_cst: 1 
+
+--> constraint_tolerance_nomult: 0.0005 
+
+--> constraint_tolerance: 0.0005 
+
+--> increaseSIGfactor: 10 
+
+
+ ------ ALM Loop = 0 
+
 **** set options.MaxIterations: 4
 * In this ALM, lambda = 0 and sigma = 200
 ** c.tolerance: 0.0588704 
@@ -42,9 +50,11 @@ p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
 fminunc stopped because it exceeded the iteration limit,
 <a href = "matlab: helpview('optim','max_iter','CSHelpWindow');">options.MaxIterations</a> = 4.000000e+00.
 
- ------ ALM Loop = 0 finished ------ 
+ ------ ALM Loop = 0 finished. 
 
- ------ ALM Loop = 1 ------ 
+
+ ------ ALM Loop = 1 
+
 **** set options.MaxIterations: 4
 * In this ALM, lambda = -2.097 and sigma = 200
 ** c.tolerance: 5e-05 
@@ -67,9 +77,11 @@ Objective function returned Inf; trying a new point...
 fminunc stopped because it exceeded the iteration limit,
 <a href = "matlab: helpview('optim','max_iter','CSHelpWindow');">options.MaxIterations</a> = 4.000000e+00.
 
- ------ ALM Loop = 1 finished ------ 
+ ------ ALM Loop = 1 finished. 
 
- ------ ALM Loop = 2 ------ 
+
+ ------ ALM Loop = 2 
+
 **** set options.MaxIterations: 5
 * In this ALM, lambda = -2.097 and sigma = 2000
 ** c.tolerance: 0.0467624 
@@ -94,9 +106,11 @@ Objective function returned Inf; trying a new point...
 fminunc stopped because it exceeded the iteration limit,
 <a href = "matlab: helpview('optim','max_iter','CSHelpWindow');">options.MaxIterations</a> = 5.000000e+00.
 
- ------ ALM Loop = 2 finished ------ 
+ ------ ALM Loop = 2 finished. 
 
- ------ ALM Loop = 3 ------ 
+
+ ------ ALM Loop = 3 
+
 **** set options.MaxIterations: 5
 * In this ALM, lambda = 16.22 and sigma = 2000
 ** c.tolerance: 5e-06 
@@ -112,9 +126,11 @@ fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_st
 the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
 
 <<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','5.899340e-05','1.000000e-03'},true,true);;">stopping criteria details</a>>
- ------ ALM Loop = 3 finished ------ 
+ ------ ALM Loop = 3 finished. 
 
- ------ ALM Loop = 4 ------ 
+
+ ------ ALM Loop = 4 
+
 **** set options.MaxIterations: 5
 * In this ALM, lambda = 16.22 and sigma = 20000
 ** c.tolerance: 0.0371447 
@@ -140,24 +156,60 @@ fminunc stopped because it cannot decrease the objective function
 along the current <a href = "matlab: helpview('optim','search_direction','CSHelpWindow');">search direction</a>.
 
 <<a href = "matlab: createExitMsg({'optim:fminusub:Exit5basic','fminunc'},{'optim:fminusub:Exit5detailed'},true,true);;">stopping criteria details</a>>
- ------ ALM Loop = 4 finished ------ 
+ ------ ALM Loop = 4 finished. 
 
- ------ ALM Loop = 5 ------ 
-**** set options.MaxIterations: 100
-* In this ALM, lambda = 8.397 and sigma = 20000
-** c.tolerance: 5e-07 
-*** fixate poles basis number: 0 
-                                                        First-order 
- Iteration  Func-count       f(x)        Step-size       optimality
-     0           1         -3.32205                          2.07
-Objective function returned Inf; trying a new point...
+-----> Optimization is complete. 
 
-<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+Total Elapsed Time: 1 hours, 23 minutes, 15 seconds. 
 
-fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
-the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
 
-<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','4.181871e-05','1.000000e-03'},true,true);;">stopping criteria details</a>>
- ------ ALM Loop = 5 finished ------ 
------>  Optimization is terminated early. ----- 
-Total Elapsed Time: 1 hours, 7 minutes, 60 seconds. 
+
+ Final Design Vector: 
+  -0.014195504175927
+  -0.004192082137526
+   0.010165137905269
+   0.068068303190259
+   0.095304285939667
+   0.156092170035595
+   0.219257079711041
+   0.282392462286262
+   0.331413072600897
+   0.404654567603464
+   0.442311503374684
+   0.459517869393437
+   0.459517869763416
+   0.442311504278729
+   0.404654569149398
+   0.331413073464865
+   0.282392462632947
+   0.219257079028963
+   0.156092169264864
+   0.095304286440201
+   0.068068304794250
+   0.010165140356127
+  -0.004192080804149
+  -0.014195504378242
+   1.807729090238335
+   1.911712289699044
+   1.908021744446879
+   1.699935356024074
+   1.643807724051769
+   1.433039450358068
+   1.268011428943463
+   1.067960858012770
+   0.900190251667607
+   0.624239580733202
+   0.343215265265080
+   0.103022561582483
+  -0.103022561377325
+  -0.343215262707887
+  -0.624239578511878
+  -0.900190250210373
+  -1.067960857503748
+  -1.268011429974537
+  -1.433039450586599
+  -1.643807730167070
+  -1.699935358249300
+  -1.908021749183398
+  -1.911712291238215
+  -1.807729090101899

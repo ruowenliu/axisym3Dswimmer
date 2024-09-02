@@ -1,4 +1,4 @@
-Date and Time: 01-Sep-2024 20:19:04 
+Date and Time: 02-Sep-2024 13:02:31 
 MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
 Computer Type: MACA64 
 Chip Type: Apple M1
@@ -110,7 +110,7 @@ along the current <a href = "matlab: helpview('optim','search_direction','CSHelp
 <<a href = "matlab: createExitMsg({'optim:fminusub:Exit5basic','fminunc'},{'optim:fminusub:Exit5detailed'},true,true);;">stopping criteria details</a>>
 -----> Optimization is complete. 
 
-Total Elapsed Time: 0 hours, 15 minutes, 37 seconds. 
+Total Elapsed Time: 0 hours, 14 minutes, 30 seconds. 
 
 Final Shape:
 -- Results:ReducedVolume 0.600049,MaxEfficiency 4.830780,DragForce 1.060375 --

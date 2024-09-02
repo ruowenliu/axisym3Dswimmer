@@ -1,4 +1,4 @@
-Date and Time: 01-Sep-2024 20:57:44 
+Date and Time: 02-Sep-2024 13:57:10 
 MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
 Computer Type: MACA64 
 Chip Type: Apple M1
@@ -20,9 +20,9 @@ p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
 
 --> increaseSIGfactor: 2 
 
---> StepTolerance: 1.000000e-04 
+--> StepTolerance: 0.0001 
 
---> OptimalityTolerance: 1.000000e-04 
+--> OptimalityTolerance: 0.0001 
 
 
 **** ALM Loop = 0 
@@ -124,7 +124,7 @@ the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWind
 <<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','1.005037e-05','1.000000e-04'},true,true);;">stopping criteria details</a>>
 -----> Optimization is complete. 
 
-Total Elapsed Time: 0 hours, 5 minutes, 16 seconds. 
+Total Elapsed Time: 0 hours, 5 minutes, 15 seconds. 
 
 Final Shape:
 -- Results:ReducedVolume 0.700033,MaxEfficiency 3.083887,DragForce 0.999202 --

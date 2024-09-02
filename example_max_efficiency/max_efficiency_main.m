@@ -50,13 +50,20 @@ global fixed_RN fixed_RS fixed_ZN fixed_ZS
 fixed_dim = 4; [new_design_vec,fixed_RN,fixed_RS,fixed_ZN,fixed_ZS] = fixpoles(design_vec,fixed_dim);
 
 %%% set optimization parameters
-c.lam = 0; c.sig = 200; fprintf('-- c.lam: %.4f and c.sig: %g -- \n', c.lam, c.sig);
-c.target = nu; fprintf('-- c.target (reduced volume): %g -- \n', c.target);
-c.tolerance = 0.1* c.sig^(-0.1); fprintf('-- c.tolerance: %g -- \n',c.tolerance);
-c.multi_cst = 1; fprintf('-- c.multi_cst: %g -- \n',c.multi_cst);
-constraint_tolerance_nomult = 1e-5; fprintf('-- constraint_tolerance_nomult: %g -- \n',constraint_tolerance_nomult);
-constraint_tolerance = constraint_tolerance_nomult*c.multi_cst; fprintf('-- constraint_tolerance: %g -- \n',constraint_tolerance);
-increaseSIGfactor = 10; fprintf('-- increaseSIGfactor: %g -- \n',increaseSIGfactor);
+c.lam = 0; c.sig = 200; 
+fprintf('--> c.lam: %.4f and c.sig: %g \n\n', c.lam, c.sig);
+c.target = nu; 
+fprintf('--> c.target (reduced volume): %g \n\n', c.target);
+c.tolerance = 0.1* c.sig^(-0.1); 
+fprintf('--> c.tolerance: %g \n\n',c.tolerance);
+c.multi_cst = 1; 
+fprintf('--> c.multi_cst: %g \n\n',c.multi_cst);
+constraint_tolerance_nomult = 0.0005; 
+fprintf('--> constraint_tolerance_nomult: %g \n\n',constraint_tolerance_nomult);
+constraint_tolerance = constraint_tolerance_nomult*c.multi_cst; 
+fprintf('--> constraint_tolerance: %g \n\n',constraint_tolerance);
+increaseSIGfactor = 10; 
+fprintf('--> increaseSIGfactor: %g \n\n',increaseSIGfactor);
 
 options = optimoptions(@fminunc, ...
     'Display','iter', ...
@@ -73,7 +80,7 @@ alm_num = -1; % counter
 outputiternum = 0; % counter
 
 while stop_code == 0
-    alm_num = alm_num + 1; fprintf('\n ------ ALM Loop = %i ------ \n', alm_num);
+    alm_num = alm_num + 1; fprintf('\n ------ ALM Loop = %i \n\n', alm_num);
 
     switch alm_num
         case {0,1}
@@ -98,7 +105,7 @@ while stop_code == 0
     L_A = @(vec) objective_maxE(vec,THETA_bas,c,'grad on',fixed_RN,fixed_RS,fixed_ZN,fixed_ZS);
     [new_design_vec_update,fval,exitflag,output] = fminunc(L_A,new_design_vec,options);
 
-    fprintf(' ------ ALM Loop = %i finished ------ \n', alm_num);
+    fprintf(' ------ ALM Loop = %i finished. \n\n', alm_num);
 
     new_design_vec = new_design_vec_update;
     design_vec = fixpolesreverse(new_design_vec,fixed_RN,fixed_RS,fixed_ZN,fixed_ZS);
@@ -110,7 +117,7 @@ while stop_code == 0
 
     if abs(Cnu) < c.tolerance
         if abs(Cnu) < constraint_tolerance
-            fprintf('-----> Optimization is complete. ----- \n')
+            fprintf('-----> Optimization is complete. \n\n')
             stop_code = 1;
         else
             c.lam = c.lam - c.sig*(Cnu);
@@ -126,13 +133,17 @@ while stop_code == 0
     end
 
     if outputiternum >= 2
-        stop_code = 1; fprintf('----->  Optimization is terminated early. ----- \n')
+        stop_code = 1; 
+        fprintf('----->  Optimization done. Please investigate the results. \n\n')
     end
 
 end
 
 tEnd = toc(tStart);
-fprintf('Total Elapsed Time: %i hours, %i minutes, %i seconds. \n', ...
+fprintf('Total Elapsed Time: %i hours, %i minutes, %i seconds. \n\n', ...
     round(tEnd/3600), round(mod(tEnd,3600)/60), ceil(mod(tEnd,60)));
+
+fprintf('\n\n Final Design Vector: \n')
+disp(design_vec)
 
 diary off
