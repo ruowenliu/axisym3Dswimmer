@@ -12,14 +12,14 @@ addpath('../shape_classes')
 addpath('../quadrature_and_kernal')
 
 global figK nu design_vec_iteration
-figK = 0;
+figK = 10; %%%%%%%%
 nu = 0.65; % reduced volume
 
 %%% write results in the diary file
 diary_name = ['max_efficiency_nu_' num2str(nu*100,'%.3i') '.txt'];
-if isfile(diary_name)
-    delete(diary_name);
-end
+% if isfile(diary_name)
+%     delete(diary_name);
+% end
 diary(diary_name);
 fprintf('Date and Time: %s \n', datetime('now'));
 fprintf('MATLAB Version: %s \n', version);
@@ -32,9 +32,22 @@ fprintf('-------START-------\n-------------------\n')
 tStart = tic;
 
 fprintf('Calculate Initial Shape.\n')
-design_vec = get_initial_parameterized_shape_gallery("symmetric-peanut",nu);
+% design_vec = get_initial_parameterized_shape_gallery("symmetric-peanut",nu);
+
+% fileID = fopen(['initial' num2str(nu*100,'%.3i') '.txt'], 'r');
+fileID = fopen('designvec_iteration_5.txt', 'r');
+design_vec = fscanf(fileID, '%f');
+fclose(fileID);
+fprintf('\n\n Initial Design Vector: \n')
+disp(design_vec);
+
 design_vec_iteration = design_vec;
 shape_initial = shape3Dmaxefficiency2(design_vec);
+disp(shape_initial.JD/shape_initial.JW - shape_initial.JE)
+plot(shape_initial.arclen,shape_initial.uslip)
+keyboard
+
+
 THETA_bas = matrix_theta_basis(shape_initial.t, shape_initial.NL, shape_initial.L);
 fprintf('\n-- Print Design Parameters: --\n')
 fprintf('p:%i,np:%i,NL:%i,NLuslip:%i,L:%g,Luslip:%g,Nu:%i\n',...
@@ -51,7 +64,8 @@ global fixed_RN fixed_RS fixed_ZN fixed_ZS
 fixed_dim = 4; [new_design_vec,fixed_RN,fixed_RS,fixed_ZN,fixed_ZS] = fixpoles(design_vec,fixed_dim);
 
 %%% set optimization parameters
-c.lam = 0; c.sig = 200; 
+c.lam = 0; 
+c.sig = 10000; %c.sig = 200; 
 fprintf('--> c.lam: %.4f and c.sig: %g \n\n', c.lam, c.sig);
 c.target = nu; 
 fprintf('--> c.target (reduced volume): %g \n\n', c.target);
@@ -83,20 +97,20 @@ outputiternum = 0; % counter
 while stop_code == 0
     alm_num = alm_num + 1; fprintf('\n ------ ALM Loop = %i \n\n', alm_num);
 
-    switch alm_num
-        case {0,1}
-            options.MaxIterations = 4;
-            fprintf('**** set options.MaxIterations: %g\n',options.MaxIterations);
-        case {2,3,4}
-            options.MaxIterations = 5;
-            fprintf('**** set options.MaxIterations: %g\n',options.MaxIterations);
-            fixed_dim = 0;[new_design_vec,fixed_RN,fixed_RS,fixed_ZN,fixed_ZS] = fixpoles(design_vec,fixed_dim);
-        otherwise
+    % switch alm_num
+    %     case {0,1}
+    %         options.MaxIterations = 4;
+    %         fprintf('**** set options.MaxIterations: %g\n',options.MaxIterations);
+    %     case {2,3,4}
+    %         options.MaxIterations = 5;
+    %         fprintf('**** set options.MaxIterations: %g\n',options.MaxIterations);
+    %         fixed_dim = 0;[new_design_vec,fixed_RN,fixed_RS,fixed_ZN,fixed_ZS] = fixpoles(design_vec,fixed_dim);
+    %     otherwise
             options.MaxIterations = 100;
             fprintf('**** set options.MaxIterations: %g\n',options.MaxIterations);
             % go back to non-fix top situation
             fixed_dim = 0;[new_design_vec,fixed_RN,fixed_RS,fixed_ZN,fixed_ZS] = fixpoles(design_vec,fixed_dim);
-    end
+    % end
 
     fprintf(['* In this ALM, lambda = ', num2str(c.lam,4), ' and sigma = ' num2str(c.sig), '\n']);
     fprintf('** c.tolerance: %g \n',c.tolerance);

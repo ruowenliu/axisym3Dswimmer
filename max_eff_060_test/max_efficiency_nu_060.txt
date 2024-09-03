@@ -1,0 +1,162 @@
+Date and Time: 02-Sep-2024 23:36:35 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+-------START-------
+-------------------
+Calculate Initial Shape.
+
+
+ Initial Design Vector: 
+  -0.051128149004770
+  -0.000006808857704
+   0.019575078077787
+   0.067861314916727
+   0.113157988214093
+   0.154465500496994
+   0.204954282536168
+   0.247552010356977
+   0.283807941676906
+   0.313513709952093
+   0.333287400397260
+   0.342708501858492
+   0.342708501861116
+   0.333287400412700
+   0.313513709930769
+   0.283807941737802
+   0.247552010374377
+   0.204954282545650
+   0.154465500564319
+   0.113157988227650
+   0.067861314967373
+   0.019575078153482
+  -0.000006808768937
+  -0.051128148997917
+   1.906356627936775
+   1.969941420500661
+   1.920731776547318
+   1.816153251134139
+   1.710066871044096
+   1.570701842719831
+   1.397076758940408
+   1.189426873184545
+   0.954305685213301
+   0.697673354023749
+   0.425080928970863
+   0.142772525128668
+  -0.142772525128547
+  -0.425080928973465
+  -0.697673354023412
+  -0.954305685222827
+  -1.189426873187651
+  -1.397076758940829
+  -1.570701842731788
+  -1.710066871060446
+  -1.816153251151477
+  -1.920731776570524
+  -1.969941420572735
+  -1.906356627948327
+Error between JD/JW and E, -1.34e-05 
+
+
+-- Print Design Parameters: --
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
+
+-- Print Initial Results: --
+-- Results:ReducedVolume 0.600048,MaxEfficiency 4.825594,DragForce 1.060377 --
+--> c.lam: 0.0000 and c.sig: 20000 
+
+--> c.target (reduced volume): 0.6 
+
+--> c.tolerance: 0.0371447 
+
+--> c.multi_cst: 1 
+
+--> constraint_tolerance_nomult: 0.0005 
+
+--> constraint_tolerance: 0.0005 
+
+--> increaseSIGfactor: 10 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         -4.82557                          2.33
+Objective function returned Inf; trying a new point...
+     1           5         -4.86531     0.00134073           5.07  
+-- Results:ReducedVolume 0.597784,MaxEfficiency 4.914398,DragForce 1.062148 --
+     2           7         -5.25842             10           7.72  
+-- Results:ReducedVolume 0.601428,MaxEfficiency 5.278809,DragForce 1.060302 --
+     3           8         -5.42348              1           16.4  
+-- Results:ReducedVolume 0.603302,MaxEfficiency 5.532525,DragForce 1.061950 --
+     4           9         -5.72276              1           4.95  
+-- Results:ReducedVolume 0.599815,MaxEfficiency 5.723105,DragForce 1.065229 --
+Objective function returned Inf; trying a new point...
+     5          13         -5.83129         0.3125           6.06  
+-- Results:ReducedVolume 0.599218,MaxEfficiency 5.837397,DragForce 1.066845 --
+Objective function returned Inf; trying a new point...
+     6          16         -5.85043        0.03125           13.6  
+-- Results:ReducedVolume 0.599174,MaxEfficiency 5.857249,DragForce 1.066971 --
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','1.431367e-06','1.000000e-04'},true,true);;">stopping criteria details</a>>
+Error between JD/JW and E, -7.98e-04 
+
+Total Elapsed Time: 0 hours, 11 minutes, 4 seconds. 
+
+
+
+ Final Design Vector: 
+  -0.047793420295615
+   0.004372643533984
+   0.010795390409162
+   0.047546076194782
+   0.057787938402392
+   0.104888580305843
+   0.138641786459971
+   0.189397894611509
+   0.247053729863876
+   0.286329092607193
+   0.317596704435576
+   0.336679980091895
+   0.336679980125195
+   0.317596704613525
+   0.286329092966393
+   0.247053730224728
+   0.189397894963222
+   0.138641786219406
+   0.104888576878034
+   0.057787919903303
+   0.047546045212463
+   0.010795374971899
+   0.004372632887202
+  -0.047793423129754
+   1.919550171062499
+   2.022853190313986
+   1.945080076871437
+   1.809370242355227
+   1.689669916036044
+   1.555837035829302
+   1.381799956979940
+   1.177948375603274
+   0.948500734294344
+   0.694381500279349
+   0.423538246642200
+   0.142350644733990
+  -0.142350644740317
+  -0.423538246660541
+  -0.694381500328357
+  -0.948500734378535
+  -1.177948375704903
+  -1.381799956923683
+  -1.555837035079446
+  -1.689669911248036
+  -1.809370216259557
+  -1.945079753167439
+  -2.022852607576875
+  -1.919550030897000

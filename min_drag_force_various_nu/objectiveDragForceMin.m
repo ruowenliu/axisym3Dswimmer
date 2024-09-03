@@ -1,5 +1,6 @@
 function [J, grad] = objectiveDragForceMin(design_vec, THETA_bas, c, compute_grad)
 % objective function L_A only for DragForceMin
+% Written by Ruowen Liu, 2023
 
 shape = shape3Dadjoint(design_vec);
 
@@ -20,7 +21,7 @@ if strcmp(compute_grad,'grad on')
         shapeDeriv = shape_derivatives(shape, THETA_bas(:,k));
         derivCu = c.multi_cst*shapeDeriv.rvolprime;
         grad(k) = shapeDeriv.Jdrag_rByV_prime - c.lam*derivCu + c.sig*(Cnu)*derivCu;
-    end % for
+    end
 else
     grad = [];
 end
@@ -45,10 +46,6 @@ shapeDeriv.Aprime = 2*pi*obj.ws'*( (Z_deriv - (-obj.cur).*real(obj.x)) .* tht_n)
 
 shapeDeriv.rvolprime = 6*sqrt(pi)*( shapeDeriv.Vprime*(obj.area^(-1.5)) -(1.5)*obj.vol*((obj.area)^(-2.5))*shapeDeriv.Aprime );
 
-%%%
-
 shapeDeriv.Jdrag_rByV_prime = ((3/4/pi)^(-1/3))/6/pi/obj.mu * ( shapeDeriv.F0prime/((obj.vol)^(1/3)) - obj.F0*shapeDeriv.Vprime/3/((obj.vol)^(4/3)) );
-
-% shapeDeriv.Jdrag_rByV_withC_prime = shapeDeriv.Jdrag_rByV_prime - c.lam*shapeDeriv.rvolprime + c.sig*(obj.rvol-c.target)*shapeDeriv.rvolprime;
 
 end
