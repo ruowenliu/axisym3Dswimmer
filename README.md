@@ -29,6 +29,7 @@ _Shape optimization of slip-driven axisymmetric microswimmers_ [arxiv](https://a
 
    **In the folder "example_max_efficiency", run the main program "max_efficiency_main.m" directly can repeat the iterations in Section 5.2. The initial shape is set as a peanut-like swimmer, then the shape is optimized to obtain the maximum swimming efficiency.**
    
-   **In the folder "min_drag_force_various_nu", the process and results are recorded in .txt file, labeled by the value of nu times 100, for example, file "..._nu_060.txt" corresponds to nu=0.60. You can run "min_drag_main.m" to reproduce all the results. Additional, the design vector of the final shape is store in .mat file.**
+   **In the folder "min_drag_force", the process and results are recorded in .txt file, labeled by the value of nu times 100, for example, file "..._nu_060.txt" corresponds to nu=0.60. You can run "mindragforce_main_program.m" to reproduce all the results, reading preset data from input_parameters.csv automatically. Additional, the design vectors of the process are also storee in .txt file.**
 
+   **max_eff_060 is kind of done, run "test_solo.m". to-do: vary sigma for different nu, polish test_solo to get dimvec from "final_designvec" txt file, etc.**
 

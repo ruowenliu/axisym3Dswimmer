@@ -15,12 +15,12 @@ global nu
 
 input_data = readtable('input_parameters.csv');
 
-for row = 1 %:size(input_data,2)
+for row = size(input_data,1)
 
     nu = input_data{row, 1};
 
     %%% write results in the diary file
-    diary_name = ['min_drag_main_nu_' num2str(100*nu, '%.3i') '.txt'];
+    diary_name = ['min_drag_force_diary_nu_' num2str(100*nu, '%.3i') '.txt'];
     if isfile(diary_name)
         delete(diary_name);
     end
@@ -36,7 +36,7 @@ for row = 1 %:size(input_data,2)
     design_vec = get_initial_prolate(nu + 0.01*randn(1),'no noise');
     shape_initial = shape3Dmaxefficiency2(design_vec);
     shape_initial.printresults;
-    fprintf('Error between JD/JW and E, %.2e \n\n',shape_initial.JD/shape_initial.JW - shape_initial.JE)
+    fprintf('\nError between JD/JW and E, %.1e (It should be close to zero.)\n\n',shape_initial.JD/shape_initial.JW - shape_initial.JE)
     plot(shape_initial.arclen, shape_initial.uslip)
     saveas(gcf, ['./iteration_0_nu_' num2str(100*nu, '%.3i') '_uslip.png']);
     close all
@@ -133,7 +133,7 @@ for row = 1 %:size(input_data,2)
     fprintf('Final Shape:\n')
     shape_current = shape3Dmaxefficiency2(design_vec);
     shape_current.printresults;
-    fprintf('Error between JD/JW and E, %.2e \n\n',shape_current.JD/shape_current.JW - shape_current.JE)
+    fprintf('\nError between JD/JW and E, %.1e (It should be close to zero.)\n\n',shape_current.JD/shape_current.JW - shape_current.JE)
     plot(shape_current.arclen, shape_current.uslip)
     saveas(gcf, ['./iteration_final_nu_' num2str(100*nu, '%.3i') '_uslip.png']);
     close all

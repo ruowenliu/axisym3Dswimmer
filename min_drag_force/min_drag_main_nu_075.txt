@@ -1,7 +1,18 @@
-Date and Time: 02-Sep-2024 12:25:12 
+Date and Time: 02-Sep-2024 23:57:29 
 MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
 Computer Type: MACA64 
 Chip Type: Apple M1
+
+
+<a href = "matlab: helpview('optim','eqn_solved','CSHelpWindow');">Equation solved</a>.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the <a href = "matlab: helpview('optim','fcn_tolerance_fsolve','CSHelpWindow');">function tolerance</a>, and
+the <a href = "matlab: helpview('optim','appears_regular','CSHelpWindow');">problem appears regular</a> as measured by the gradient.
+
+<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','4.953036e-12','1.000000e-06','1.120440e-24','1.000000e-03'},true,true);;">stopping criteria details</a>>
+-- Results:ReducedVolume 0.755377,MaxEfficiency 2.015572,DragForce 0.980810 --
+Error between JD/JW and E, -7.81e-12 
 
 -------START-------
 -------------------
@@ -95,7 +106,9 @@ the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWind
 <<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.580020e-07','1.000000e-04'},true,true);;">stopping criteria details</a>>
 -----> Optimization is complete. 
 
-Total Elapsed Time: 0 hours, 6 minutes, 56 seconds. 
+Total Elapsed Time: 0 hours, 7 minutes, 40 seconds. 
 
 Final Shape:
 -- Results:ReducedVolume 0.749922,MaxEfficiency 2.442337,DragForce 0.979120 --
+Error between JD/JW and E, 6.01e-07 
+
