@@ -1,0 +1,54 @@
+Date and Time: 08-Sep-2024 11:24:06 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+-------START-------
+-------------------
+Error between JD/JW and E, 5.19e-08 
+
+
+-- Print Design Parameters: --
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
+
+-- Print Initial Results: --
+-- Results:ReducedVolume 0.574992,MaxEfficiency 5.215660,DragForce 1.081033 --
+--> c.lam: 0.000000 
+
+--> c.sig: 25000 
+
+--> c.target (reduced volume): 0.575 
+
+--> c.tolerance: 0.036325 
+
+--> c.multi_cst: 1 
+
+--> constraint_tolerance_nomult: 0.0005 
+
+--> constraint_tolerance: 0.0005 
+
+--> increaseSIGfactor: 10 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         -5.21566                          2.99
+Objective function returned Inf; trying a new point...
+     1           5         -5.32009     0.00227723           8.84  
+-- Results:ReducedVolume 0.572188,MaxEfficiency 5.418912,DragForce 1.083462 --
+     2           7         -5.94815        6.48201            9.3  
+-- Results:ReducedVolume 0.576437,MaxEfficiency 5.973978,DragForce 1.083077 --
+Objective function returned Inf; trying a new point...
+     3           9         -6.06513            0.5           6.44  
+-- Results:ReducedVolume 0.575490,MaxEfficiency 6.068131,DragForce 1.083570 --
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','6.986728e-04','1.000000e-03'},true,true);;">stopping criteria details</a>>
+Error between JD/JW and E, 1.63e-06 
+
+Total Elapsed Time: 0 hours, 13 minutes, 26 seconds. 
+

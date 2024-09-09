@@ -1,0 +1,69 @@
+Date and Time: 08-Sep-2024 21:08:37 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+-------START-------
+-------------------
+Error between JD/JW and E, -3.00e-10 
+
+
+-- Print Design Parameters: --
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
+
+-- Print Initial Results: --
+-- Results:ReducedVolume 0.949980,MaxEfficiency 0.871795,DragForce 0.959540 --
+--> c.lam: 0.000000 
+
+--> c.sig: 10000 
+
+--> c.target (reduced volume): 0.95 
+
+--> c.tolerance: 0.398107 
+
+--> c.multi_cst: 1 
+
+--> constraint_tolerance_nomult: 0.001 
+
+--> constraint_tolerance: 0.001 
+
+--> increaseSIGfactor: 10 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1        -0.871793                         0.337
+     1           5        -0.873013     0.00245522         0.0515  
+-- Results:ReducedVolume 0.949487,MaxEfficiency 0.874329,DragForce 0.959433 --
+     2           7        -0.873466             10         0.0421  
+-- Results:ReducedVolume 0.949476,MaxEfficiency 0.874838,DragForce 0.959433 --
+     3           8        -0.874341              1          0.116  
+-- Results:ReducedVolume 0.949307,MaxEfficiency 0.876745,DragForce 0.959483 --
+     4           9        -0.874525              1         0.0186  
+-- Results:ReducedVolume 0.949456,MaxEfficiency 0.876002,DragForce 0.959507 --
+     5          10        -0.874565              1         0.0289  
+-- Results:ReducedVolume 0.949478,MaxEfficiency 0.875926,DragForce 0.959525 --
+     6          11        -0.874619              1         0.0277  
+-- Results:ReducedVolume 0.949493,MaxEfficiency 0.875903,DragForce 0.959541 --
+     7          12        -0.874671              1         0.0222  
+-- Results:ReducedVolume 0.949480,MaxEfficiency 0.876021,DragForce 0.959551 --
+     8          13         -0.87468              1         0.0617  
+-- Results:ReducedVolume 0.949473,MaxEfficiency 0.876070,DragForce 0.959547 --
+     9          14        -0.874745              1         0.0116  
+-- Results:ReducedVolume 0.949461,MaxEfficiency 0.876199,DragForce 0.959544 --
+    10          15        -0.874769              1         0.0111  
+-- Results:ReducedVolume 0.949449,MaxEfficiency 0.876288,DragForce 0.959539 --
+    11          16         -0.87481              1         0.0288  
+-- Results:ReducedVolume 0.949429,MaxEfficiency 0.876440,DragForce 0.959533 --
+    12          17        -0.874862              1         0.0358  
+-- Results:ReducedVolume 0.949420,MaxEfficiency 0.876543,DragForce 0.959538 --
+    13          19        -0.874893            0.5         0.0485  
+-- Results:ReducedVolume 0.949408,MaxEfficiency 0.876645,DragForce 0.959545 --
+
+Stop due to directionalderivative small, criterion 1e-05. 
+
+fminunc stopped by the <a href = "matlab: helpview('optim','msg_output_function','CSHelpWindow');">output or plot function</a>.
+
+Error between JD/JW and E, -3.75e-10 
+
+Total Elapsed Time: 0 hours, 22 minutes, 60 seconds. 
+

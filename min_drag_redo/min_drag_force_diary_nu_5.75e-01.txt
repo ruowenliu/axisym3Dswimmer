@@ -1,0 +1,111 @@
+Date and Time: 08-Sep-2024 02:04:08 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+
+<a href = "matlab: helpview('optim','eqn_solved','CSHelpWindow');">Equation solved</a>.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the <a href = "matlab: helpview('optim','fcn_tolerance_fsolve','CSHelpWindow');">function tolerance</a>, and
+the <a href = "matlab: helpview('optim','appears_regular','CSHelpWindow');">problem appears regular</a> as measured by the gradient.
+
+<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','4.278505e-08','1.000000e-06','8.671471e-17','1.000000e-03'},true,true);;">stopping criteria details</a>>
+-- Results:ReducedVolume 0.580377,MaxEfficiency 4.224413,DragForce 1.078186 --
+
+Error between JD/JW and E, 6.3e-11 (It should be close to zero.)
+
+-------START-------
+-------------------
+--> Print Design Parameters: 
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99 
+
+--> c.lam: 0.00000 and c.sig: 10.00000 
+
+--> c.target (reduced volume): 0.57 
+
+--> c.tolerance: 0.794328 
+
+--> c.multi_cst: 2.5 
+
+--> constraint_tolerance: 0.00025 
+
+--> increaseSIGfactor: 2 
+
+--> StepTolerance: 0.001 
+
+--> OptimalityTolerance: 0.001 
+
+
+**** ALM Loop = 0 
+current parameters: lambda = 0 and sigma = 10
+current c.tolerance: 0.794328 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1          1.07909                        0.0712
+     1           3          1.07669       0.142136        0.00898  
+-- Results: Reduced_Vol = 0.588715  Drag_rByV = 1.070808 --
+     2           5          1.07606             10         0.0114  
+-- Results: Reduced_Vol = 0.589691  Drag_rByV = 1.069320 --
+     3           6          1.07568              1        0.00527  
+-- Results: Reduced_Vol = 0.588880  Drag_rByV = 1.069663 --
+     4           7          1.07549              1        0.00438  
+-- Results: Reduced_Vol = 0.588667  Drag_rByV = 1.069655 --
+     5           8           1.0753              1        0.00168  
+-- Results: Reduced_Vol = 0.588160  Drag_rByV = 1.069885 --
+     6           9          1.07527              1        0.00112  
+-- Results: Reduced_Vol = 0.588156  Drag_rByV = 1.069863 --
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','1.961334e-04','1.000000e-03'},true,true);;">stopping criteria details</a>>
+
+**** ALM Loop = 1 
+current parameters: lambda = -0.3289 and sigma = 10
+current c.tolerance: 0.1 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1          1.08609                          0.12
+     1           3          1.08103       0.109597        0.00698  
+-- Results: Reduced_Vol = 0.576564  Drag_rByV = 1.079665 --
+     2           4          1.08101              1        0.00211  
+-- Results: Reduced_Vol = 0.575833  Drag_rByV = 1.080300 --
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','6.140512e-04','1.000000e-03'},true,true);;">stopping criteria details</a>>
+
+**** ALM Loop = 2 
+current parameters: lambda = -0.3497 and sigma = 10
+current c.tolerance: 0.0125893 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1          1.08105                       0.00746
+     1           3          1.08103       0.126309        0.00223  
+-- Results: Reduced_Vol = 0.574992  Drag_rByV = 1.081033 --
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','7.075166e-04','1.000000e-03'},true,true);;">stopping criteria details</a>>
+-----> Optimization is complete. 
+
+Total Elapsed Time: 0 hours, 4 minutes, 46 seconds. 
+
+Final Shape:
+-- Results:ReducedVolume 0.574992,MaxEfficiency 5.215660,DragForce 1.081033 --
+
+Error between JD/JW and E, 5.2e-08 (It should be close to zero.)
+

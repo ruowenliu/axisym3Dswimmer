@@ -10,12 +10,13 @@ warningid = 'MATLAB:nearlySingularMatrix';
 warning('off',warningid)
 addpath('../shape_classes')
 addpath('../quadrature_and_kernal')
+addpath('../optimization_functions')
 
 global nu
 
 input_data = readtable('input_parameters.csv');
 
-for row = 1:size(input_data,1)
+for row = 2%:size(input_data,1)
 
     nu = input_data{row, 1};
 

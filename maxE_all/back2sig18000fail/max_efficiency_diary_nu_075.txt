@@ -1,0 +1,46 @@
+Date and Time: 07-Sep-2024 20:42:58 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+-------START-------
+-------------------
+Error between JD/JW and E, 1.46e-08 
+
+
+-- Print Design Parameters: --
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
+
+-- Print Initial Results: --
+-- Results:ReducedVolume 0.749837,MaxEfficiency 2.437790,DragForce 0.979154 --
+--> c.lam: 0.000000 
+
+--> c.sig: 18000 
+
+--> c.target (reduced volume): 0.75 
+
+--> c.tolerance: 0.0375381 
+
+--> c.multi_cst: 1 
+
+--> constraint_tolerance_nomult: 0.0005 
+
+--> constraint_tolerance: 0.0005 
+
+--> increaseSIGfactor: 10 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         -2.43755                         0.986
+Objective function returned Inf; trying a new point...
+     1           6         -2.44065    0.000710119           1.04  
+-- Results:ReducedVolume 0.749255,MaxEfficiency 2.445641,DragForce 0.979353 --
+
+Stop due to directionalderivative small, criterion 0.0001. 
+
+fminunc stopped by the <a href = "matlab: helpview('optim','msg_output_function','CSHelpWindow');">output or plot function</a>.
+
+Error between JD/JW and E, 1.43e-08 
+
+Total Elapsed Time: 0 hours, 4 minutes, 29 seconds. 
+

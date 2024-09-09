@@ -1,0 +1,58 @@
+Date and Time: 08-Sep-2024 18:19:58 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+-------START-------
+-------------------
+Error between JD/JW and E, 7.25e-08 
+
+
+-- Print Design Parameters: --
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
+
+-- Print Initial Results: --
+-- Results:ReducedVolume 0.852921,MaxEfficiency 1.471056,DragForce 0.956384 --
+--> c.lam: 0.000000 
+
+--> c.sig: 8000 
+
+--> c.target (reduced volume): 0.85 
+
+--> c.tolerance: 0.407091 
+
+--> c.multi_cst: 1 
+
+--> constraint_tolerance_nomult: 0.001 
+
+--> constraint_tolerance: 0.001 
+
+--> increaseSIGfactor: 10 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         -1.43692                           3.5
+Objective function returned Inf; trying a new point...
+     1           5         -1.49325     0.00126505          0.352  
+-- Results:ReducedVolume 0.849178,MaxEfficiency 1.495958,DragForce 0.956786 --
+     2           7         -1.50138             10          0.265  
+-- Results:ReducedVolume 0.849014,MaxEfficiency 1.505268,DragForce 0.956793 --
+     3           8         -1.50666              1          0.175  
+-- Results:ReducedVolume 0.849037,MaxEfficiency 1.510369,DragForce 0.956804 --
+Objective function returned Inf; trying a new point...
+     4          12         -1.50887         0.3125          0.161  
+-- Results:ReducedVolume 0.849065,MaxEfficiency 1.512364,DragForce 0.956813 --
+Objective function returned Inf; trying a new point...
+     5          55         -1.51001      0.0813972           0.15  
+-- Results:ReducedVolume 0.849080,MaxEfficiency 1.513392,DragForce 0.956819 --
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because it cannot decrease the objective function
+along the current <a href = "matlab: helpview('optim','search_direction','CSHelpWindow');">search direction</a>.
+
+<<a href = "matlab: createExitMsg({'optim:fminusub:Exit5basic','fminunc'},{'optim:fminusub:Exit5detailed'},true,true);;">stopping criteria details</a>>
+Error between JD/JW and E, 3.04e-07 
+
+Total Elapsed Time: 1 hours, 4 minutes, 50 seconds. 
+

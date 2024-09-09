@@ -1,0 +1,115 @@
+Date and Time: 07-Sep-2024 23:14:16 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+
+<a href = "matlab: helpview('optim','eqn_solved','CSHelpWindow');">Equation solved</a>.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the <a href = "matlab: helpview('optim','fcn_tolerance_fsolve','CSHelpWindow');">function tolerance</a>, and
+the <a href = "matlab: helpview('optim','appears_regular','CSHelpWindow');">problem appears regular</a> as measured by the gradient.
+
+<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','6.302429e-07','1.000000e-06','1.544075e-14','1.000000e-03'},true,true);;">stopping criteria details</a>>
+-- Results:ReducedVolume 0.530377,MaxEfficiency 5.388017,DragForce 1.125391 --
+
+Error between JD/JW and E, -9.3e-11 (It should be close to zero.)
+
+-------START-------
+-------------------
+--> Print Design Parameters: 
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99 
+
+--> c.lam: 0.00000 and c.sig: 10.00000 
+
+--> c.target (reduced volume): 0.53 
+
+--> c.tolerance: 0.794328 
+
+--> c.multi_cst: 1 
+
+--> constraint_tolerance: 0.0001 
+
+--> increaseSIGfactor: 1 
+
+--> StepTolerance: 0.001 
+
+--> OptimalityTolerance: 0.001 
+
+
+**** ALM Loop = 0 
+current parameters: lambda = 0 and sigma = 10
+current c.tolerance: 0.794328 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1          1.12554                         0.131
+Objective function returned Inf; trying a new point...
+     1           3          1.09092            0.5         0.0313  
+-- Results: Reduced_Vol = 0.583728  Drag_rByV = 1.073673 --
+     2           4          1.08861              1        0.00322  
+-- Results: Reduced_Vol = 0.600976  Drag_rByV = 1.059749 --
+Objective function returned Inf; trying a new point...
+     3           6          1.08858            0.5        0.00273  
+-- Results: Reduced_Vol = 0.601380  Drag_rByV = 1.059412 --
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','2.030329e-04','1.000000e-03'},true,true);;">stopping criteria details</a>>
+
+**** ALM Loop = 1 
+current parameters: lambda = -0.7638 and sigma = 10
+current c.tolerance: 0.1 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1          1.14692                         0.103
+     1           2           1.1319              1         0.0479  
+-- Results: Reduced_Vol = 0.525954  Drag_rByV = 1.131163 --
+     2           3          1.12698              1        0.00608  
+-- Results: Reduced_Vol = 0.549559  Drag_rByV = 1.105204 --
+     3           4          1.12678              1        0.00431  
+-- Results: Reduced_Vol = 0.550000  Drag_rByV = 1.104559 --
+     4           5          1.12642              1        0.00339  
+-- Results: Reduced_Vol = 0.549019  Drag_rByV = 1.105191 --
+     5           6          1.12633              1        0.00204  
+-- Results: Reduced_Vol = 0.548505  Drag_rByV = 1.105610 --
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('ellipke', '/Applications/MATLAB_R2024a.app/toolbox/matlab/specfun/ellipke.m', 35)" style="font-weight:bold">ellipke</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024a.app/toolbox/matlab/specfun/ellipke.m',35,0)">line 35</a>)
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('nellipke', '/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/quadrature_and_kernal/nellipke.m', 10)" style="font-weight:bold">nellipke</a> (<a href="matlab: opentoline('/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/quadrature_and_kernal/nellipke.m',10,0)">line 10</a>)
+        [K, E] = ellipke(m(k));
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('AxiKernel', '/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/quadrature_and_kernal/AxiKernel.m', 35)" style="font-weight:bold">AxiKernel</a> (<a href="matlab: opentoline('/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/quadrature_and_kernal/AxiKernel.m',35,0)">line 35</a>)
+        [K, E] = nellipke(4*a*b/P^2);
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('SphereQuadtp', '/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/quadrature_and_kernal/SphereQuadtp.m', 13)" style="font-weight:bold">SphereQuadtp</a> (<a href="matlab: opentoline('/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/quadrature_and_kernal/SphereQuadtp.m',13,0)">line 13</a>)
+    Ker = AxiKernel(x1, x2, real(t.x(ne)), imag(t.x(ne)));
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('AlpertSphereSLPMat', '/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/quadrature_and_kernal/AlpertSphereSLPMat.m', 178)" style="font-weight:bold">AlpertSphereSLPMat</a> (<a href="matlab: opentoline('/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/quadrature_and_kernal/AlpertSphereSLPMat.m',178,0)">line 178</a>)
+alpSLP = SphereQuadtp(s,s);
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('shape3Dadjoint', '/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/shape_classes/shape3Dadjoint.m', 22)" style="font-weight:bold">shape3Dadjoint</a> (<a href="matlab: opentoline('/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/shape_classes/shape3Dadjoint.m',22,0)">line 22</a>)
+            obj.A = AlpertSphereSLPMat(obj);
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('objectiveDragForceMin', '/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/optimization_functions/objectiveDragForceMin.m', 5)" style="font-weight:bold">objectiveDragForceMin</a> (<a href="matlab: opentoline('/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/optimization_functions/objectiveDragForceMin.m',5,0)">line 5</a>)
+shape = shape3Dadjoint(design_vec);
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('mindragforce_main_program>@(vec)objectiveDragForceMin(vec,THETA_bas,c,''grad on'')', '/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/min_drag_force/mindragforce_main_program.m', 98)" style="font-weight:bold">mindragforce_main_program>@(vec)objectiveDragForceMin(vec,THETA_bas,c,'grad on')</a> (<a href="matlab: opentoline('/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/min_drag_force/mindragforce_main_program.m',98,0)">line 98</a>)
+        L_A = @(vec) objectiveDragForceMin(vec, THETA_bas, c, 'grad on');
+In lineSearch
+
+In lineSearch
+
+In lineSearch
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fminusub', '/Applications/MATLAB_R2024a.app/toolbox/shared/optimlib/fminusub.m', 206)" style="font-weight:bold">fminusub</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024a.app/toolbox/shared/optimlib/fminusub.m',206,0)">line 206</a>)
+        lineSearch(funfcn,x,dir,f,dirDerivative, ...
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fminunc', '/Applications/MATLAB_R2024a.app/toolbox/shared/optimlib/fminunc.m', 499)" style="font-weight:bold">fminunc</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024a.app/toolbox/shared/optimlib/fminunc.m',499,0)">line 499</a>)
+   [x,FVAL,GRAD,HESSIAN,EXITFLAG,OUTPUT] = fminusub(funfcn,x, ...
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('mindragforce_main_program', '/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/min_drag_force/mindragforce_main_program.m', 99)" style="font-weight:bold">mindragforce_main_program</a> (<a href="matlab: opentoline('/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/min_drag_force/mindragforce_main_program.m',99,0)">line 99</a>)
+        [design_vec_update,~,~,output] = fminunc(L_A,design_vec,options);} 
+nu=0.525;num2str(nu, '%.3e')
+ans =
+    '5.250e-01'
+nu=0.525;num2str(nu, '%.2e')
+ans =
+    '5.25e-01'
+mindragforce_main_program

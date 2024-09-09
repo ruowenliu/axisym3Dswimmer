@@ -1,0 +1,51 @@
+Date and Time: 07-Sep-2024 21:01:01 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+-------START-------
+-------------------
+Error between JD/JW and E, 6.01e-07 
+
+
+-- Print Design Parameters: --
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
+
+-- Print Initial Results: --
+-- Results:ReducedVolume 0.749922,MaxEfficiency 2.442337,DragForce 0.979120 --
+--> c.lam: 0.000000 
+
+--> c.sig: 5000 
+
+--> c.target (reduced volume): 0.75 
+
+--> c.tolerance: 0.0426681 
+
+--> c.multi_cst: 1 
+
+--> constraint_tolerance_nomult: 0.0005 
+
+--> constraint_tolerance: 0.0005 
+
+--> increaseSIGfactor: 10 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         -2.44232                          1.36
+Objective function returned Inf; trying a new point...
+     1           5         -2.45422     0.00230062          0.953  
+-- Results:ReducedVolume 0.747167,MaxEfficiency 2.474288,DragForce 0.980070 --
+     2           6         -2.46048              1          0.733  
+-- Results:ReducedVolume 0.747729,MaxEfficiency 2.473372,DragForce 0.979872 --
+Objective function returned Inf; trying a new point...
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the <a href = "matlab: helpview('optim','norm_current_step','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sfminbx:Exit2basic','fminunc'},{'optimlib:sfminbx:Exit2detailed','1.865458e-04','1.000000e-03'},true,true);;">stopping criteria details</a>>
+Error between JD/JW and E, 1.16e-08 
+
+Total Elapsed Time: 0 hours, 6 minutes, 57 seconds. 
+

@@ -1,0 +1,67 @@
+Date and Time: 08-Sep-2024 19:42:49 
+MATLAB Version: 24.1.0.2628055 (R2024a) Update 4 
+Computer Type: MACA64 
+Chip Type: Apple M1
+
+-------START-------
+-------------------
+Error between JD/JW and E, -5.41e-09 
+
+
+-- Print Design Parameters: --
+p:10,np:60,NL:21,NLuslip:200,L:3.14159,Luslip:6.28319,Nu:99
+
+-- Print Initial Results: --
+-- Results:ReducedVolume 0.899949,MaxEfficiency 1.157881,DragForce 0.954314 --
+--> c.lam: 0.000000 
+
+--> c.sig: 10000 
+
+--> c.target (reduced volume): 0.9 
+
+--> c.tolerance: 0.398107 
+
+--> c.multi_cst: 1 
+
+--> constraint_tolerance_nomult: 0.001 
+
+--> constraint_tolerance: 0.001 
+
+--> increaseSIGfactor: 10 
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           1         -1.15787                         0.467
+     1           5         -1.15923     0.00144762          0.065  
+-- Results:ReducedVolume 0.899428,MaxEfficiency 1.160866,DragForce 0.954305 --
+     2           7         -1.15994             10          0.057  
+-- Results:ReducedVolume 0.899421,MaxEfficiency 1.161616,DragForce 0.954307 --
+     3           8         -1.16278              1            0.3  
+-- Results:ReducedVolume 0.899100,MaxEfficiency 1.166834,DragForce 0.954471 --
+     4           9         -1.16359              1         0.0499  
+-- Results:ReducedVolume 0.899414,MaxEfficiency 1.165306,DragForce 0.954443 --
+     5          10         -1.16377              1         0.0737  
+-- Results:ReducedVolume 0.899462,MaxEfficiency 1.165214,DragForce 0.954464 --
+     6          11         -1.16414              1          0.123  
+-- Results:ReducedVolume 0.899501,MaxEfficiency 1.165389,DragForce 0.954511 --
+     7          12         -1.16474              1          0.158  
+-- Results:ReducedVolume 0.899537,MaxEfficiency 1.165814,DragForce 0.954560 --
+     8          13         -1.16611              1           0.21  
+-- Results:ReducedVolume 0.899585,MaxEfficiency 1.166971,DragForce 0.954666 --
+Objective function returned Inf; trying a new point...
+     9          17         -1.16687         0.3125          0.257  
+-- Results:ReducedVolume 0.899620,MaxEfficiency 1.167594,DragForce 0.954710 --
+Objective function returned Inf; trying a new point...
+    10          53          -1.1673      0.0712495          0.266  
+-- Results:ReducedVolume 0.899626,MaxEfficiency 1.167998,DragForce 0.954731 --
+
+<a href = "matlab: helpview('optim','local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because it cannot decrease the objective function
+along the current <a href = "matlab: helpview('optim','search_direction','CSHelpWindow');">search direction</a>.
+
+<<a href = "matlab: createExitMsg({'optim:fminusub:Exit5basic','fminunc'},{'optim:fminusub:Exit5detailed'},true,true);;">stopping criteria details</a>>
+Error between JD/JW and E, -6.35e-06 
+
+Total Elapsed Time: 1 hours, 7 minutes, 42 seconds. 
+
