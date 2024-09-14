@@ -47,5 +47,6 @@ _Shape optimization of slip-driven axisymmetric microswimmers_
 
 5.4. Library of optimal shapes for maximum swimming efficiency, with various reduced volume
 
-   **max_eff_060 is kind of done, run "test_solo.m". to-do: vary sigma for different nu, polish test_solo to get dimvec from "final_designvec" txt file, etc.**
-
+   folder **maxE_nu_050etc**, run **maxE_main_program.m** for nu = 0.50, 0.525, 0.55, 0.575
+   
+   folder **maxE_nu_060**
