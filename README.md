@@ -49,4 +49,6 @@ _Shape optimization of slip-driven axisymmetric microswimmers_
 
    folder **maxE_nu_050etc**, run **maxE_main_program.m** for nu = 0.50, 0.525, 0.55, 0.575
    
-   folder **maxE_nu_060**
+   folder **maxE_nu_060**, run **maxE_060.m** for nu = 0.60. Same for the rest nu up to 0.95.
+   
+   Note: Reuse the results of nu=0.70 from the previous peanut-alike example for best E.
