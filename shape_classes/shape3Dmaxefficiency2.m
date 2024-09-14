@@ -72,7 +72,7 @@ classdef shape3Dmaxefficiency2 < shape3Dadjoint
             tlt = title(titlename,'FontSize',15);
             set(tlt,'Interpreter','latex');
             set(gca,'FontSize',15,'TickLabelInterpreter','latex');
-            grid off; axis equal; ylim([-2.5,2.5]); drawnow;
+            grid off; axis equal; ylim([-2.6,2.6]); drawnow;
         end
 
         function plotorange(obj)
@@ -83,7 +83,7 @@ classdef shape3Dmaxefficiency2 < shape3Dadjoint
             tlt = title(titlename,'FontSize',15);
             set(tlt,'Interpreter','latex');
             set(gca,'FontSize',15,'TickLabelInterpreter','latex');
-            grid off; axis equal; ylim([-2.5,2.5]); drawnow;
+            grid off; axis equal; ylim([-2.6,2.6]); drawnow;
         end
 
         function plotgreen(obj)
@@ -94,7 +94,7 @@ classdef shape3Dmaxefficiency2 < shape3Dadjoint
             tlt = title(titlename,'FontSize',15);
             set(tlt,'Interpreter','latex');
             set(gca,'FontSize',15,'TickLabelInterpreter','latex');
-            grid off; axis equal; ylim([-2.5,2.5]); drawnow;
+            grid off; axis equal; ylim([-2.6,2.6]); drawnow;
         end
 
         function plotblue(obj)
@@ -105,7 +105,7 @@ classdef shape3Dmaxefficiency2 < shape3Dadjoint
             tlt = title(titlename,'FontSize',15);
             set(tlt,'Interpreter','latex');
             set(gca,'FontSize',15,'TickLabelInterpreter','latex');
-            grid off; axis equal; ylim([-2.5,2.5]); drawnow;
+            grid off; axis equal; ylim([-2.6,2.6]); drawnow;
         end
 
     end
