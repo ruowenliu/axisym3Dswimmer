@@ -55,4 +55,4 @@ _Shape optimization of slip-driven axisymmetric microswimmers_
 
    folder **plot_figures** stores the codes to generate figures
 
-  _brewermap_ (c) 2014 Stephen Cobeldick is used to control colorbars.
+  _brewermap_ (c) 2014-2022 Stephen Cobeldick is used to control colorbars.
