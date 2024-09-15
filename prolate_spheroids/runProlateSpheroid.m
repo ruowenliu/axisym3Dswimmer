@@ -7,7 +7,7 @@ warning('off',warningid)
 addpath('../shape_classes')
 addpath('../quadrature_and_kernal')
 
-for nu = 0.5:0.05:1.0
+for nu = 0.50:0.05:1.00
     tic
     fprintf('Prolate Spheroid, Reduced Volume = %.2f \n', nu)
 
@@ -28,6 +28,9 @@ for nu = 0.5:0.05:1.0
     savefigfilename = ['ProlateSpheroidFigure' num2str(round(nu*100),'%.3i')];
     saveas(gcf, savefigfilename, 'png')
     saveas(gcf, savefigfilename, 'epsc')
+
+    disp(savefigfilename);
+    shape_initial.printresults;
 
     fprintf('Time elapsed: %g seconds. \n\n', toc)
 

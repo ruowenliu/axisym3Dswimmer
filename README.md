@@ -9,8 +9,6 @@ _Shape optimization of slip-driven axisymmetric microswimmers_
 
   The folder **quadrature_and_kernal** contains the programs for solving the forward (and adjoint) problem. 
    
-  _brewermap_ (c) 2014 Stephen Cobeldick is used to control colorbars.
-   
 2. Functions for shape representation are stored in the folder **shape_classes**
 
 3. Shape sensitivity verifications
@@ -52,3 +50,7 @@ _Shape optimization of slip-driven axisymmetric microswimmers_
    folder **maxE_nu_060**, run **maxE_060.m** for nu = 0.60. Same for the rest nu up to 0.95.
    
    Note: Reuse the results of nu=0.70 from the previous peanut-alike example for best E.
+   
+6. Generate figures (velocity fields)
+
+  _brewermap_ (c) 2014 Stephen Cobeldick is used to control colorbars.
