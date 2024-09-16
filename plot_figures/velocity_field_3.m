@@ -7,7 +7,7 @@ warningid = 'MATLAB:nearlySingularMatrix'; warning('off',warningid);
 addpath('../shape_classes')
 addpath('../quadrature_and_kernal')
 
-nu = 0.65;
+nu = 0.50;
 
 for kcase = 1:3
     tic
@@ -16,7 +16,6 @@ for kcase = 1:3
 
         case 3
             titleline = sprintf('Max Efficiency');
-
             mat_name = ['vfield_nu_' num2str(round(nu*100),'%.3i') '_' num2str(kcase) '.mat'];
             if exist(mat_name, 'file') == 2
                 disp('\n Load Results \n');
@@ -24,13 +23,11 @@ for kcase = 1:3
             else
                 disp('\n Recalculate Results \n');
                 % Read design vector
-                file_name = '/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/maxE_nu_065/back4sig15000okay/maxE_nu_065_designvec_iteration_3.txt';
+                file_name = '../maxE_nu_050etc/maxE_result_5.00e-01/maxE_nu_5.00e-01_designvec_iter_2.txt';
                 fID = fopen(file_name, 'r');
                 design_vec = fscanf(fID, '%f');
                 fclose(fID);
                 shape = shape3Dmaxefficiency2(design_vec);
-                fprintf('Verify U is one: %g\n', shape.U);
-
             end
 
         case 2
@@ -42,12 +39,11 @@ for kcase = 1:3
             else
                 disp('\n Recalculate Results \n');
                 % Read design vector
-                file_name = '/Users/ruowen/Documents/GitHub_Ruowen/axisym3Dswimmer/min_drag_2/final_designvec_mindragforce_nu_065.txt';
+                file_name = '../min_drag_1/final_designvec_mindragforce_nu_5.00e-01.txt';
                 fID = fopen(file_name, 'r');
                 design_vec = fscanf(fID, '%f');
                 fclose(fID);
                 shape = shape3Dmaxefficiency2(design_vec);
-                fprintf('Verify U is one: %g\n', shape.U);
             end
 
         case 1
@@ -61,7 +57,6 @@ for kcase = 1:3
                 % Read design vector
                 design_vec = get_initial_prolate(nu,'no noise');
                 shape = shape3Dmaxefficiency2(design_vec);
-                fprintf('Verify U is one: %g\n', shape.U);
             end
 
     end
@@ -134,67 +129,64 @@ for kcase = 1:3
 
         timecompute = toc;
         fprintf('->  Generating data time cost about %.0f minutes. \n', round(timecompute/60)); % about 5 min each
-
-    else
-
-        %%% plotting
-        tic
-        % plot 3D swimmer view
-        figure('Position', [0 0 600 720])
-        hold on
-        s = surf(X,Y,Z);
-        s.EdgeAlpha = 0.0;
-        s.FaceColor = 0.9*[1 1 1];
-        s.FaceAlpha = 0.8;
-        s.FaceLighting = 'gouraud';
-        s.BackFaceLighting = 'unlit';
-        axis equal
-        grid off
-        view(0,90)
-        light('Position',[-0.4 0.2 0.3]); % Add lights
-        xlim(xlimval); ylim(ylimval); zlim(zlimval);
-
-        % plot stream
-        hold on
-        pc = pcolor(gr,gz,u_magnitude);
-        set(pc, 'FaceColor', 'interp', 'LineStyle', 'none', 'FaceLighting', 'none')
-        bm = brewermap([], '-Spectral');
-        colormap(bm);
-        clb = colorbar;cluplim=0.5;clim([0,cluplim]);clb.Ticks = 0:0.05:cluplim;clb.TickLabels{end}="$\ge "+num2str(cluplim)+"$";set(clb,'TickLabelInterpreter','latex');
-        %if kcase < 3, clb.Visible = 'off'; end
-        streamlinecolor = 'w'; streamlinewidth = 0.8;
-        streamlinedensity = 1.8;
-        % The default value is 1. Higher values produce more streamlines on each plane. For example, 2 produces approximately twice as many streamlines as the default, while 0.5 produces approximately half as many.
-        h0 = streamslice(gr,gz,real(u),imag(u),streamlinedensity);
-        set(h0,'color',streamlinecolor,'linewidth',streamlinewidth);
-        h1 = streamslice(-gr,gz,-real(u),imag(u),streamlinedensity);
-        set(h1,'color',streamlinecolor,'linewidth',streamlinewidth);
-
-        % set tick and title
-        titlefontsize = 40; tickfontsize = 35; xlabfontsize = 35;
-        set(gca,'fontsize',tickfontsize,'TickLabelInterpreter','latex');
-        set(gca,'XTick',xlimval(1):1:xlimval(end));
-        set(gca,'YTick',ylimval(1):1:ylimval(end));
-        box on
-
-        lineA = ['$\nu$ ' num2str(shape.rvol,'%.3f')];lineB = ['$E$ ' num2str(shape.JE,'%.3f')];lineC = ['$J_{\! drag}$ ' num2str(shape.Jdrag_rByV,'%.3f')];
-        ttl = title(titleline);
-        xlab = xlabel([lineA,', ',lineB,', ',lineC]);
-        set(ttl,'fontsize',titlefontsize,'interpreter','latex');
-        set(xlab,'fontsize',xlabfontsize,'interpreter','latex');
-
-        if kcase ~= 2
-            colorbar('off');
-        end
-
-        % save plots
-        saveas(gcf,['vfield_nu_' num2str(round(nu*100),'%.3i') '_' num2str(kcase)],'epsc');
-        saveas(gcf,['vfield_nu_' num2str(round(nu*100),'%.3i') '_' num2str(kcase)],'png');
-
-        %
-        timecompute = toc;
-        fprintf('->  Time cost plotting about %.0f seconds. \n', round(timecompute)); % about 5 min each
-
     end
+
+    %%% plotting
+    tic
+    % plot 3D swimmer view
+    figure('Position', [0 0 600 720])
+    hold on
+    s = surf(X,Y,Z);
+    s.EdgeAlpha = 0.0;
+    s.FaceColor = 0.9*[1 1 1];
+    s.FaceAlpha = 0.8;
+    s.FaceLighting = 'gouraud';
+    s.BackFaceLighting = 'unlit';
+    axis equal
+    grid off
+    view(0,90)
+    light('Position',[-0.4 0.2 0.3]); % Add lights
+    xlim(xlimval); ylim(ylimval); zlim(zlimval);
+
+    % plot stream
+    hold on
+    pc = pcolor(gr,gz,u_magnitude);
+    set(pc, 'FaceColor', 'interp', 'LineStyle', 'none', 'FaceLighting', 'none')
+    bm = brewermap([], '-Spectral');
+    colormap(bm);
+    clb = colorbar;cluplim=0.5;clim([0,cluplim]);clb.Ticks = 0:0.05:cluplim;clb.TickLabels{end}="$\ge "+num2str(cluplim)+"$";set(clb,'TickLabelInterpreter','latex');
+    %if kcase < 3, clb.Visible = 'off'; end
+    streamlinecolor = 'w'; streamlinewidth = 0.8;
+    streamlinedensity = 1.8;
+    % The default value is 1. Higher values produce more streamlines on each plane. For example, 2 produces approximately twice as many streamlines as the default, while 0.5 produces approximately half as many.
+    h0 = streamslice(gr,gz,real(u),imag(u),streamlinedensity);
+    set(h0,'color',streamlinecolor,'linewidth',streamlinewidth);
+    h1 = streamslice(-gr,gz,-real(u),imag(u),streamlinedensity);
+    set(h1,'color',streamlinecolor,'linewidth',streamlinewidth);
+
+    % set tick and title
+    titlefontsize = 40; tickfontsize = 35; xlabfontsize = 35;
+    set(gca,'fontsize',tickfontsize,'TickLabelInterpreter','latex');
+    set(gca,'XTick',xlimval(1):1:xlimval(end));
+    set(gca,'YTick',ylimval(1):1:ylimval(end));
+    box on
+
+    lineA = ['$\nu$ ' num2str(shape.rvol,'%.3f')];lineB = ['$E$ ' num2str(shape.JE,'%.3f')];lineC = ['$J_{\! drag}$ ' num2str(shape.Jdrag_rByV,'%.3f')];
+    ttl = title(titleline);
+    xlab = xlabel([lineA,', ',lineB,', ',lineC]);
+    set(ttl,'fontsize',titlefontsize,'interpreter','latex');
+    set(xlab,'fontsize',xlabfontsize,'interpreter','latex');
+
+    if kcase ~= 2
+        colorbar('off');
+    end
+
+    % save plots
+    saveas(gcf,['vfield_nu_' num2str(round(nu*100),'%.3i') '_' num2str(kcase)],'epsc');
+    saveas(gcf,['vfield_nu_' num2str(round(nu*100),'%.3i') '_' num2str(kcase)],'png');
+
+    %
+    timecompute = toc;
+    fprintf('->  Time cost plotting about %.0f seconds. \n', round(timecompute)); % about 5 min each
 
 end
