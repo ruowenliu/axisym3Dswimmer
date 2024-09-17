@@ -1,7 +1,7 @@
-classdef shape3Dmaxefficiency2 < shape3Dadjoint
+classdef shape3Dmaxefficiency2_resetNL < shape3Dadjoint_resetNL
     % This is a subclass determining optimal slip and max efficiency
     % use the new slip optimization method (faster and more accurate)
-    % (c) 2023 Ruowen Liu
+    % (c) 2024 Ruowen Liu
 
     properties
         uslip {mustBeNumeric}
@@ -16,8 +16,8 @@ classdef shape3Dmaxefficiency2 < shape3Dadjoint
 
     methods
 
-        function obj = shape3Dmaxefficiency2(design_vec)
-            obj = obj@shape3Dadjoint(design_vec); % adjoint solution
+        function obj = shape3Dmaxefficiency2_resetNL(NL, design_vec)
+            obj = obj@shape3Dadjoint_resetNL(NL, design_vec); % adjoint solution
             Mat = [ (real(obj.tang).*obj.C(1:end/2,:) + imag(obj.tang).*obj.C(end/2+1:end,:)) ; ...
                 (real(obj.nx).*obj.A(1:end/2,:) + imag(obj.nx).*obj.A(end/2+1:end,:)) ];
             rhs = [dotv(obj.trachat, obj.tang) ; zeros(size(obj.nx))];

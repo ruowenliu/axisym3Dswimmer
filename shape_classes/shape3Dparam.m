@@ -10,7 +10,7 @@ classdef shape3Dparam
         % NLuslip: MUTST BE EVEN, number of equi-spaced subintervals (for uslip) on [0,Luslip]
         p {mustBeNumeric} = 10
         np {mustBeNumeric} = 60
-        NL {mustBeNumeric} = 21
+        NL {mustBeNumeric} = 21 
         NLuslip {mustBeNumeric} = 200
         L {mustBeNumeric} = pi
         Luslip {mustBeNumeric} = 2*pi        
